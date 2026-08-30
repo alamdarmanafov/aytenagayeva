@@ -230,8 +230,8 @@ export default function Home() {
       </nav>
 
       <main>
-        <section id="top" className="hero container">
-          <div className="hero-grid">
+        <section id="top" className="hero">
+          <div className="container hero-grid">
             <div>
               <p className="eyebrow">Ruhsal Yolculuğa Xoş Gəldin ✨</p>
               <h1>Aytən Ağayeva</h1>
@@ -277,41 +277,43 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="services" className="container">
-          <div className="section-head">
-            <p className="eyebrow">Seanslar</p>
-            <h2>Necə Kömək Edə Bilərəm</h2>
-            <p className="lead" style={{ margin: '0 auto' }}>
-              Hər kartın üzərinə klikləyərək ətraflı məlumatı görə bilərsiniz.
-            </p>
-          </div>
-          <div className="services-grid">
-            {services.map((service) => (
-              <details className="service-card" key={service.title}>
-                <summary>
-                  <div>
-                    <h3>{service.title}</h3>
-                    <p className="service-summary">{service.summary}</p>
-                    {service.meta.length > 0 && (
-                      <div className="service-meta">
-                        {service.meta.map((m) => (
-                          <span key={m}>{m}</span>
-                        ))}
-                      </div>
-                    )}
+        <section id="services">
+          <div className="container">
+            <div className="section-head">
+              <p className="eyebrow">Seanslar</p>
+              <h2>Necə Kömək Edə Bilərəm</h2>
+              <p className="lead" style={{ margin: '0 auto' }}>
+                Hər kartın üzərinə klikləyərək ətraflı məlumatı görə bilərsiniz.
+              </p>
+            </div>
+            <div className="services-grid">
+              {services.map((service) => (
+                <details className="service-card" key={service.title}>
+                  <summary>
+                    <div>
+                      <h3>{service.title}</h3>
+                      <p className="service-summary">{service.summary}</p>
+                      {service.meta.length > 0 && (
+                        <div className="service-meta">
+                          {service.meta.map((m) => (
+                            <span key={m}>{m}</span>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                    <svg className="chevron" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M6 9l6 6 6-6" />
+                    </svg>
+                  </summary>
+                  <div className="service-details">
+                    {service.details}
+                    <a className="service-cta" href={WHATSAPP_LINK} target="_blank" rel="noreferrer">
+                      Qeydiyyat üçün WhatsApp-da yazın →
+                    </a>
                   </div>
-                  <svg className="chevron" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M6 9l6 6 6-6" />
-                  </svg>
-                </summary>
-                <div className="service-details">
-                  {service.details}
-                  <a className="service-cta" href={WHATSAPP_LINK} target="_blank" rel="noreferrer">
-                    Qeydiyyat üçün WhatsApp-da yazın →
-                  </a>
-                </div>
-              </details>
-            ))}
+                </details>
+              ))}
+            </div>
           </div>
         </section>
 
@@ -360,56 +362,60 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="certificates" className="container">
-          <div className="section-head">
-            <p className="eyebrow">Sertifikatlar</p>
-            <h2>Təhsil və Sertifikatlar</h2>
-          </div>
-          {certificates.map((group) => (
-            <div className="cert-year" key={group.year}>
-              <h3>{group.year}</h3>
-              {group.images.length > 0 && (
-                <div className="cert-grid">
-                  {group.images.map((cert) => (
-                    <a
-                      className="cert-thumb"
-                      key={cert.label}
-                      href={cert.full.src}
-                      target="_blank"
-                      rel="noreferrer"
-                      title={cert.label}
-                    >
-                      <Image src={cert.src} alt={cert.label} placeholder="blur" />
-                    </a>
-                  ))}
-                </div>
-              )}
-              {group.pills.length > 0 && (
-                <div className="cert-pills">
-                  {group.pills.map((item) => (
-                    <span className="cert-pill" key={item}>
-                      {item}
-                    </span>
-                  ))}
-                </div>
-              )}
+        <section id="certificates">
+          <div className="container">
+            <div className="section-head">
+              <p className="eyebrow">Sertifikatlar</p>
+              <h2>Təhsil və Sertifikatlar</h2>
             </div>
-          ))}
+            {certificates.map((group) => (
+              <div className="cert-year" key={group.year}>
+                <h3>{group.year}</h3>
+                {group.images.length > 0 && (
+                  <div className="cert-grid">
+                    {group.images.map((cert) => (
+                      <a
+                        className="cert-thumb"
+                        key={cert.label}
+                        href={cert.full.src}
+                        target="_blank"
+                        rel="noreferrer"
+                        title={cert.label}
+                      >
+                        <Image src={cert.src} alt={cert.label} placeholder="blur" />
+                      </a>
+                    ))}
+                  </div>
+                )}
+                {group.pills.length > 0 && (
+                  <div className="cert-pills">
+                    {group.pills.map((item) => (
+                      <span className="cert-pill" key={item}>
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
         </section>
 
-        <section className="container">
-          <div className="cta" id="contact">
-            <div className="cta-avatar">
-              <Image src={headshotPhoto} alt="Aytən Ağayeva" placeholder="blur" />
+        <section>
+          <div className="container">
+            <div className="cta" id="contact">
+              <div className="cta-avatar">
+                <Image src={headshotPhoto} alt="Aytən Ağayeva" placeholder="blur" />
+              </div>
+              <h2>Qeydiyyat</h2>
+              <p>
+                Seanslar online və Studio Om Shri-də (Bakı) keçirilir. Qeydiyyat üçün öncədən yazılmaq mütləqdir.
+                Qiymətlə bağlı məlumat WhatsApp-da veriləcək.
+              </p>
+              <a className="btn btn-primary" href={WHATSAPP_LINK} target="_blank" rel="noreferrer">
+                WhatsApp ilə yaz
+              </a>
             </div>
-            <h2>Qeydiyyat</h2>
-            <p>
-              Seanslar online və Studio Om Shri-də (Bakı) keçirilir. Qeydiyyat üçün öncədən yazılmaq mütləqdir.
-              Qiymətlə bağlı məlumat WhatsApp-da veriləcək.
-            </p>
-            <a className="btn btn-primary" href={WHATSAPP_LINK} target="_blank" rel="noreferrer">
-              WhatsApp ilə yaz
-            </a>
           </div>
         </section>
       </main>
