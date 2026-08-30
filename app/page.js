@@ -31,7 +31,7 @@ const YOUTUBE_LINK = 'https://youtube.com/@ruhsaloyanis';
 const INSTAGRAM_LINK = 'https://instagram.com/ayten.ga';
 
 const specialties = [
-  { icon: IconLeaf, title: 'Şüuraltı Transformasiya', text: 'Şüuraltı blokların və keçmiş travmaların şəfası.' },
+  { icon: IconLeaf, title: 'Şüuraltı Transformasiya', text: 'Şüuraltı blokların və keçmiş travmaların şəfalandırılması.' },
   { icon: IconHeart, title: 'Emosional Balans', text: 'Stresin azaldılması və emosional tarazlığın bərpası.' },
   { icon: IconCoin, title: 'Bolluq-Bərəkət', text: 'Niyyət çalışmaları ilə bolluq şüurunun aktivləşdirilməsi.' },
   { icon: IconSpark, title: 'Enerji Balanslama', text: 'İntuitiv enerji oxuma və balanslama praktikaları.' },
@@ -43,8 +43,8 @@ const services = [
     icon: IconSpark,
     title: 'ThetaHealing — Şüuraltı Seans',
     summary:
-      'Problemlərin şüuraltı səbəblərini müəyyən edib dərhal şəfa verməyə imkan yaradan effektiv texnika. Beynimizdəki mənfi inancları, enerji tıxanıqlarını və travmaları aradan qaldırır.',
-    meta: ['16 yaş və yuxarı', '1 saat 30 dəqiqə', 'Ayda 1 dəfə', 'Min. 3-5 seans'],
+      'Problemlərin şüuraltı səbəblərini müəyyən edib dərhal şəfalandırmağa imkan yaradan effektiv texnika. Beynimizdəki mənfi inancları, enerji tıxanıqlarını və travmaları aradan qaldırır.',
+    meta: ['16 yaş və yuxarı', 'İlk 2 seans 1 saat 30 dəq', 'Sonra 1 saat', 'Ayda 1 dəfə'],
     details: (
       <>
         <p>Hansı mövzular üzərində işləmək olar:</p>
@@ -65,7 +65,10 @@ const services = [
           <li>Həyatda özünü tapma</li>
           <li>Fiziki və ruhi gərginliklər</li>
         </ul>
-        <p>Neçə seans yetərlidir sualının cavabı ilk seansdan sonra bəlli olur, minimum 3-5 seans məsləhət görülür.</p>
+        <p>
+          İlk 2 seans 1 saat 30 dəqiqə çəkir, sonrakı seanslar isə 1 saat davam edir. Neçə seans yetərlidir sualının
+          cavabı ilk seansdan sonra bəlli olur, minimum 3-5 seans məsləhət görülür.
+        </p>
       </>
     ),
   },
@@ -111,7 +114,7 @@ const services = [
           <li>Qorxu və köhnə inanclardan azad olmaq istəyənlər</li>
           <li>Həyatında daha çox firavanlıq görmək istəyənlər</li>
         </ul>
-        <p>Seansda nələr olur: köhnə pul qorxularının şəfası, bolluq şüurunun aktivləşdirilməsi, enerji bloklarının yumşaldılması, daxili dəyər və icazə enerjisinin yüksəldilməsi.</p>
+        <p>Seansda nələr olur: köhnə pul qorxularının şəfalandırılması, bolluq şüurunun aktivləşdirilməsi, enerji bloklarının yumşaldılması, daxili dəyər və icazə enerjisinin yüksəldilməsi.</p>
         <p>Nəticələr: maddiyyata qarşı rahat münasibət, yeni imkan və gəlir axını, daha çox açılan qapılar, pul qəbul etmə enerjisinin güclənməsi.</p>
       </>
     ),
@@ -148,7 +151,7 @@ const services = [
           <li>Müqəddəs qadın yaradılışı ilə bağlantı — daxili gücün oyanması</li>
           <li>Qadın enerjisinin artımı — zəriflik, cazibə, özünə dəyər, intuisiya</li>
           <li>Bolluq kanalının açılması — qıtlıq və qorxu kodlarının təmizlənməsi</li>
-          <li>Ailə və sevgi kanalının şəfası — ana nəsli və keçmiş münasibətlərin təmizlənməsi</li>
+          <li>Ailə və sevgi kanalının şəfalandırılması — ana nəsli və keçmiş münasibətlərin təmizlənməsi</li>
         </ul>
         <p>
           Seans sonunda özünə sevgi, özünə dəyər, güvən, sevgi və bolluğu qəbul etmə hissi ilə güclü bir enerji
@@ -156,7 +159,7 @@ const services = [
         </p>
         <p>
           Kimlər üçündür: qadın enerjisini gücləndirmək, münasibətlərdə təkrar edən döngüləri dəyişmək, bolluq
-          kanalındakı bloku açmaq və özünə sevgini şəfalamaq istəyən hər bir qadın üçün.
+          kanalındakı bloku açmaq və özünə sevgini şəfalandırmaq istəyən hər bir qadın üçün.
         </p>
       </>
     ),
@@ -418,7 +421,7 @@ export default function Home() {
               </div>
               <h2>Qeydiyyat</h2>
               <p>
-                Seanslar online və Studio Om Shri-də (Bakı) keçirilir. Qeydiyyat üçün öncədən yazılmaq mütləqdir.
+                Sadəcə online və canlı studioda seanslar keçirilir. Qeydiyyat üçün öncədən yazılmaq mütləqdir.
                 Qiymətlə bağlı məlumat WhatsApp-da veriləcək.
               </p>
               <a className="btn btn-primary" href={WHATSAPP_LINK} target="_blank" rel="noreferrer">
