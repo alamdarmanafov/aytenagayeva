@@ -5,7 +5,6 @@ import {
   IconCoin,
   IconSpark,
   IconUsers,
-  IconShield,
   IconInstagram,
   IconWhatsapp,
   IconYoutube,
@@ -40,7 +39,7 @@ const specialties = [
 
 const services = [
   {
-    icon: IconSpark,
+    photo: aboutPhoto,
     title: 'ThetaHealing — Şüuraltı Seans',
     summary:
       'Problemlərin şüuraltı səbəblərini müəyyən edib dərhal şəfalandırmağa imkan yaradan effektiv texnika. Beynimizdəki mənfi inancları, enerji tıxanıqlarını və travmaları aradan qaldırır.',
@@ -73,7 +72,7 @@ const services = [
     ),
   },
   {
-    icon: IconUsers,
+    photo: heroPhoto,
     title: 'Life Coach Seansı',
     summary:
       'Potensialınızı maksimuma çıxarmaq, güclü tərəflərinizi üzə çıxarmaq, özünə inamı və disiplini artırmaq üçün fərdi koçluq seansı.',
@@ -99,7 +98,7 @@ const services = [
     ),
   },
   {
-    icon: IconCoin,
+    photo: headshotPhoto,
     title: 'Bolluq-Bərəkət Seansı',
     summary:
       'Maddi axının qarşısındakı görünməyən blokları təmizləyən, bolluq şüurunu aktivləşdirən və daxili dəyər hissini yüksəldən xüsusi seans.',
@@ -120,7 +119,7 @@ const services = [
     ),
   },
   {
-    icon: IconShield,
+    photo: aboutPhoto,
     title: 'JAAS Seansı',
     summary:
       "Jean Adrienne's Clearing System — enerji protokolları və şüuraltı sorğu sistemləri ilə işləyən, strukturlaşdırılmış və dəqiq nəticəli bir metod.",
@@ -140,7 +139,7 @@ const services = [
     ),
   },
   {
-    icon: IconHeart,
+    photo: heroPhoto,
     title: 'Qadın Enerjisi Seansı',
     summary:
       'Qadının içində gizli qalan ilahi gücü oyatmaq, ruhani enerjisini yüksəltmək və həyatında bolluq, sevgi və harmoniya axınını aktivləşdirmək üçün hazırlanmış xüsusi seans.',
@@ -192,6 +191,19 @@ const certificates = [
   },
 ];
 
+const INSTAGRAM_REVIEWS_LINK = 'https://www.instagram.com/stories/highlights/18083118499401201/';
+
+const testimonials = [
+  'Seans mənə çətin olsa da, çox şeyi yada salmağı və unutmağı öyrətdi. Hal-hazırda özümü çox yaxşı hiss edirəm, sizinlə bağışlamağı və şəfalanmağı öyrənirəm.',
+  'İçimdə olan neqativ hissi atmağı bacardım, yığılıb qalmış duyğuları söküb atdım eləbil. Əvvəl mənfi fikir gələndə başıma ağrılar gəlirdi, indi heç düşünmək belə istəmir beynim.',
+  'Seansdan çıxdığımda hiss etdiyim o xoşbəxtlik indi də üzərimdədir. Heç bir fiziki narahatlığım yoxdur artıq, bu sevinclə ətrafımdakı hər kəsi xoşbəxt etməyə çalışıram.',
+  '6 il içimdə saxladığım qorxu hissi, uşaqlıqdan gələn günahkarlıq hissi — artıq həmin hisslər yoxdur məndə. Sonsuz təşəkkür edirəm.',
+  'Otağın aurası, mühiti o qədər gözəl idi ki, getmək istəmirdim heç. İlk gündən belə təsir gördümsə, sonrakı günlər daha yaxşı olacaq.',
+  'Sizin yanınıza gəlməmişdən bir neçə saat sonra özümdə fərqindəlik hiss etdim, insanlara qırılmamaq üçün "yox" deməyi bacardım və özümü ruhən çox rahatlamış hiss edirəm.',
+  'Mənə özümü sevdirdiyiniz üçün çox sağ olun. Seans vaxtı ən çox təsirləndiyim an özümü qucaqlayanda oldu — əsas sevgini özümə göstərməli olduğumu anladım.',
+  'Özümü yeni bir insan kimi hiss edirəm. Sizin yanınıza gəlməyimlə həyatımda böyük iz qoyan bir hadisəni tamam fərqli görməyə başladım.',
+];
+
 export default function Home() {
   return (
     <>
@@ -225,6 +237,9 @@ export default function Home() {
             </li>
             <li>
               <a href="#certificates">Sertifikatlar</a>
+            </li>
+            <li>
+              <a href="#testimonials">Rəylər</a>
             </li>
             <li>
               <a href="#contact">Qeydiyyat</a>
@@ -298,7 +313,7 @@ export default function Home() {
                 <details className="service-card" key={service.title}>
                   <summary>
                     <div className="service-media">
-                      <service.icon />
+                      <Image src={service.photo} alt={service.title} placeholder="blur" />
                     </div>
                     <div className="service-body">
                       <div className="service-body-head">
@@ -413,6 +428,29 @@ export default function Home() {
           </div>
         </section>
 
+        <section id="testimonials" className="testimonials">
+          <div className="container">
+            <div className="section-head">
+              <p className="eyebrow">Rəylər</p>
+              <h2>Müştərilərimin Söylədikləri</h2>
+            </div>
+            <div className="testimonials-grid">
+              {testimonials.map((quote, i) => (
+                <div className="testimonial-card" key={i}>
+                  <span className="testimonial-quote">"</span>
+                  <p>{quote}</p>
+                </div>
+              ))}
+            </div>
+            <p className="testimonials-more">
+              Daha çox real rəy üçün:{' '}
+              <a href={INSTAGRAM_REVIEWS_LINK} target="_blank" rel="noreferrer">
+                Instagram — Nəticələr
+              </a>
+            </p>
+          </div>
+        </section>
+
         <section>
           <div className="container">
             <div className="cta" id="contact">
@@ -461,6 +499,9 @@ export default function Home() {
                 </li>
                 <li>
                   <a href="#certificates">Sertifikatlar</a>
+                </li>
+                <li>
+                  <a href="#testimonials">Rəylər</a>
                 </li>
               </ul>
             </div>
