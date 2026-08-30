@@ -28,7 +28,6 @@ import certJaasFull from '../public/images/certificates/jaas-full.jpg';
 const WHATSAPP_LINK = 'https://wa.me/994708768657';
 const YOUTUBE_LINK = 'https://youtube.com/@ruhsaloyanis';
 const INSTAGRAM_LINK = 'https://instagram.com/ayten.ga';
-const EMAIL = 'ayten.aqayeva.97@mail.ru';
 
 const specialties = [
   { icon: IconLeaf, title: 'Şüuraltı Transformasiya', text: 'Şüuraltı blokların və keçmiş travmaların şəfası.' },
@@ -189,7 +188,6 @@ export default function Home() {
     <>
       <div className="topbar">
         <div className="topbar-inner">
-          <span>{EMAIL}</span>
           <div className="topbar-socials">
             <a href={INSTAGRAM_LINK} target="_blank" rel="noreferrer" aria-label="Instagram">
               <IconInstagram />
