@@ -5,6 +5,7 @@ import {
   IconCoin,
   IconSpark,
   IconUsers,
+  IconShield,
   IconInstagram,
   IconWhatsapp,
   IconYoutube,
@@ -39,6 +40,7 @@ const specialties = [
 
 const services = [
   {
+    icon: IconSpark,
     title: 'ThetaHealing — Şüuraltı Seans',
     summary:
       'Problemlərin şüuraltı səbəblərini müəyyən edib dərhal şəfa verməyə imkan yaradan effektiv texnika. Beynimizdəki mənfi inancları, enerji tıxanıqlarını və travmaları aradan qaldırır.',
@@ -68,6 +70,7 @@ const services = [
     ),
   },
   {
+    icon: IconUsers,
     title: 'Life Coach Seansı',
     summary:
       'Potensialınızı maksimuma çıxarmaq, güclü tərəflərinizi üzə çıxarmaq, özünə inamı və disiplini artırmaq üçün fərdi koçluq seansı.',
@@ -93,6 +96,7 @@ const services = [
     ),
   },
   {
+    icon: IconCoin,
     title: 'Bolluq-Bərəkət Seansı',
     summary:
       'Maddi axının qarşısındakı görünməyən blokları təmizləyən, bolluq şüurunu aktivləşdirən və daxili dəyər hissini yüksəldən xüsusi seans.',
@@ -113,6 +117,7 @@ const services = [
     ),
   },
   {
+    icon: IconShield,
     title: 'JAAS Seansı',
     summary:
       "Jean Adrienne's Clearing System — enerji protokolları və şüuraltı sorğu sistemləri ilə işləyən, strukturlaşdırılmış və dəqiq nəticəli bir metod.",
@@ -132,6 +137,7 @@ const services = [
     ),
   },
   {
+    icon: IconHeart,
     title: 'Qadın Enerjisi Seansı',
     summary:
       'Qadının içində gizli qalan ilahi gücü oyatmaq, ruhani enerjisini yüksəltmək və həyatında bolluq, sevgi və harmoniya axınını aktivləşdirmək üçün hazırlanmış xüsusi seans.',
@@ -288,8 +294,16 @@ export default function Home() {
               {services.map((service) => (
                 <details className="service-card" key={service.title}>
                   <summary>
-                    <div>
-                      <h3>{service.title}</h3>
+                    <div className="service-media">
+                      <service.icon />
+                    </div>
+                    <div className="service-body">
+                      <div className="service-body-head">
+                        <h3>{service.title}</h3>
+                        <svg className="chevron" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                          <path d="M6 9l6 6 6-6" />
+                        </svg>
+                      </div>
                       <p className="service-summary">{service.summary}</p>
                       {service.meta.length > 0 && (
                         <div className="service-meta">
@@ -299,9 +313,6 @@ export default function Home() {
                         </div>
                       )}
                     </div>
-                    <svg className="chevron" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <path d="M6 9l6 6 6-6" />
-                    </svg>
                   </summary>
                   <div className="service-details">
                     {service.details}
