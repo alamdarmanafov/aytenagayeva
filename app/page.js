@@ -5,9 +5,6 @@ import {
   IconCoin,
   IconSpark,
   IconUsers,
-  IconMail,
-  IconPhone,
-  IconMapPin,
   IconInstagram,
   IconWhatsapp,
   IconYoutube,
@@ -16,17 +13,22 @@ import heroPhoto from '../public/images/photos/session-in-progress.jpg';
 import aboutPhoto from '../public/images/photos/portrait-studio.jpg';
 import headshotPhoto from '../public/images/photos/headshot.jpg';
 import certBasicDna from '../public/images/certificates/basic-dna.jpg';
+import certBasicDnaFull from '../public/images/certificates/basic-dna-full.jpg';
 import certAdvancedDna from '../public/images/certificates/advanced-dna.jpg';
+import certAdvancedDnaFull from '../public/images/certificates/advanced-dna-full.jpg';
 import certYouAndCreator from '../public/images/certificates/you-and-creator.jpg';
+import certYouAndCreatorFull from '../public/images/certificates/you-and-creator-full.jpg';
 import certDigDeeper from '../public/images/certificates/dig-deeper.jpg';
+import certDigDeeperFull from '../public/images/certificates/dig-deeper-full.jpg';
 import certManifesting from '../public/images/certificates/manifesting-abundance.jpg';
+import certManifestingFull from '../public/images/certificates/manifesting-abundance-full.jpg';
 import certJaas from '../public/images/certificates/jaas.jpg';
+import certJaasFull from '../public/images/certificates/jaas-full.jpg';
 
 const WHATSAPP_LINK = 'https://wa.me/994708768657';
 const YOUTUBE_LINK = 'https://youtube.com/@ruhsaloyanis';
 const INSTAGRAM_LINK = 'https://instagram.com/ayten.ga';
 const EMAIL = 'ayten.aqayeva.97@mail.ru';
-const PHONE_DISPLAY = '+994 70 876 86 57';
 
 const specialties = [
   { icon: IconLeaf, title: 'Şüuraltı Transformasiya', text: 'Şüuraltı blokların və keçmiş travmaların şəfası.' },
@@ -160,10 +162,10 @@ const certificates = [
   {
     year: '2023',
     images: [
-      { src: certBasicDna, label: 'ThetaHealing — Basic DNA' },
-      { src: certAdvancedDna, label: 'ThetaHealing — Advanced DNA' },
-      { src: certDigDeeper, label: 'ThetaHealing — Dig Deeper' },
-      { src: certYouAndCreator, label: 'ThetaHealing — You and the Creator' },
+      { src: certBasicDna, full: certBasicDnaFull, label: 'ThetaHealing — Basic DNA' },
+      { src: certAdvancedDna, full: certAdvancedDnaFull, label: 'ThetaHealing — Advanced DNA' },
+      { src: certDigDeeper, full: certDigDeeperFull, label: 'ThetaHealing — Dig Deeper' },
+      { src: certYouAndCreator, full: certYouAndCreatorFull, label: 'ThetaHealing — You and the Creator' },
     ],
     pills: ['Life Coaching', 'Sadhu Therapy'],
   },
@@ -175,8 +177,8 @@ const certificates = [
   {
     year: '2025',
     images: [
-      { src: certManifesting, label: 'ThetaHealing — Manifesting and Abundance' },
-      { src: certJaas, label: "JAAS — Jean Adrienne's Clearing System" },
+      { src: certManifesting, full: certManifestingFull, label: 'ThetaHealing — Manifesting and Abundance' },
+      { src: certJaas, full: certJaasFull, label: "JAAS — Jean Adrienne's Clearing System" },
     ],
     pills: [],
   },
@@ -372,7 +374,7 @@ export default function Home() {
                     <a
                       className="cert-thumb"
                       key={cert.label}
-                      href={cert.src.src}
+                      href={cert.full.src}
                       target="_blank"
                       rel="noreferrer"
                       title={cert.label}
@@ -454,30 +456,9 @@ export default function Home() {
                 ))}
               </ul>
             </div>
-            <div className="footer-col">
-              <h4>Əlaqə</h4>
-              <ul>
-                <li>
-                  <a href={`mailto:${EMAIL}`}>
-                    <IconMail /> &nbsp;{EMAIL}
-                  </a>
-                </li>
-                <li>
-                  <a href={WHATSAPP_LINK} target="_blank" rel="noreferrer">
-                    <IconPhone /> &nbsp;{PHONE_DISPLAY}
-                  </a>
-                </li>
-                <li>
-                  <span>
-                    <IconMapPin /> &nbsp;4 Əhməd Cavad, Bakı — Studio Om Shri
-                  </span>
-                </li>
-              </ul>
-            </div>
           </div>
           <div className="footer-bottom">
             <span>© {new Date().getFullYear()} Aytən Ağayeva. Bütün hüquqlar qorunur.</span>
-            <span>aytenagayeva.com</span>
           </div>
         </div>
       </footer>

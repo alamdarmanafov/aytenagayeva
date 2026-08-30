@@ -78,8 +78,7 @@ svg {
   position: sticky;
   top: 0;
   z-index: 10;
-  background: rgba(250, 248, 242, 0.92);
-  backdrop-filter: blur(8px);
+  background: var(--bg);
   border-bottom: 1px solid var(--border);
 }
 
@@ -575,7 +574,7 @@ footer {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+  grid-template-columns: 1.4fr 1fr 1fr;
   gap: 2rem;
   padding-bottom: 2.5rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
