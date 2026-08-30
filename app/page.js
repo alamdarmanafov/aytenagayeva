@@ -1,38 +1,167 @@
+import Image from 'next/image';
 import {
   IconLeaf,
-  IconShield,
+  IconHeart,
+  IconCoin,
   IconSpark,
-  IconClock,
   IconUsers,
   IconMail,
   IconPhone,
   IconMapPin,
   IconInstagram,
-  IconLinkedin,
-  IconGithub,
+  IconWhatsapp,
+  IconYoutube,
 } from './icons';
+import atenPhoto from '../public/images/ayten-seans.jpg';
 
-const features = [
-  { icon: IconLeaf, title: 'Diqqətli Yanaşma', text: 'Hər layihəyə detallara önəm verərək yanaşıram.' },
-  { icon: IconShield, title: 'Etibarlı Nəticə', text: 'Keyfiyyət və vaxtında təhvil ön planda olur.' },
-  { icon: IconSpark, title: 'Yaradıcı Həllər', text: 'Fərqli fikirlərlə orijinal nəticələr yaradıram.' },
-  { icon: IconClock, title: 'Vaxtında Təhvil', text: 'Razılaşdırılmış müddətə hörmətlə yanaşıram.' },
-  { icon: IconUsers, title: 'Əməkdaşlıq', text: 'Müştəri ilə açıq ünsiyyət və şəffaf proses.' },
+const WHATSAPP_LINK = 'https://wa.me/994708768657';
+const YOUTUBE_LINK = 'https://youtube.com/@ruhsaloyanis';
+const INSTAGRAM_LINK = 'https://instagram.com/ayten.ga';
+const EMAIL = 'ayten.aqayeva.97@mail.ru';
+const PHONE_DISPLAY = '+994 70 876 86 57';
+
+const specialties = [
+  { icon: IconLeaf, title: 'Şüuraltı Transformasiya', text: 'Şüuraltı blokların və keçmiş travmaların şəfası.' },
+  { icon: IconHeart, title: 'Emosional Balans', text: 'Stresin azaldılması və emosional tarazlığın bərpası.' },
+  { icon: IconCoin, title: 'Bolluq-Bərəkət', text: 'Niyyət çalışmaları ilə bolluq şüurunun aktivləşdirilməsi.' },
+  { icon: IconSpark, title: 'Enerji Balanslama', text: 'İntuitiv enerji oxuma və balanslama praktikaları.' },
+  { icon: IconUsers, title: 'Qadın Enerjisi', text: 'Daxili gücün və qadınlıq enerjisinin aktivləşdirilməsi.' },
 ];
 
 const services = [
-  { title: 'Xidmət 1', text: 'Bu xidmətin qısa təsviri buraya yazılacaq.' },
-  { title: 'Xidmət 2', text: 'Bu xidmətin qısa təsviri buraya yazılacaq.' },
-  { title: 'Xidmət 3', text: 'Bu xidmətin qısa təsviri buraya yazılacaq.' },
-  { title: 'Xidmət 4', text: 'Bu xidmətin qısa təsviri buraya yazılacaq.' },
-  { title: 'Xidmət 5', text: 'Bu xidmətin qısa təsviri buraya yazılacaq.' },
-  { title: 'Xidmət 6', text: 'Bu xidmətin qısa təsviri buraya yazılacaq.' },
+  {
+    title: 'ThetaHealing — Şüuraltı Seans',
+    summary:
+      'Problemlərin şüuraltı səbəblərini müəyyən edib dərhal şəfa verməyə imkan yaradan effektiv texnika. Beynimizdəki mənfi inancları, enerji tıxanıqlarını və travmaları aradan qaldırır.',
+    meta: ['16 yaş və yuxarı', '1 saat 30 dəqiqə', 'Ayda 1 dəfə', 'Min. 3-5 seans'],
+    details: (
+      <>
+        <p>Hansı mövzular üzərində işləmək olar:</p>
+        <ul>
+          <li>Ana və atadan gələn travmalar</li>
+          <li>Ana bətni</li>
+          <li>Evlilik</li>
+          <li>Atılmaq</li>
+          <li>Təcavüz</li>
+          <li>Karyera</li>
+          <li>Fobiyalar</li>
+          <li>Sevilməmə</li>
+          <li>Dəyərsizlik</li>
+          <li>Rədd edilmə</li>
+          <li>Münasibətlər</li>
+          <li>Bolluq bərəkət</li>
+          <li>Ölüm qorxusu</li>
+          <li>Həyatda özünü tapma</li>
+          <li>Fiziki və ruhi gərginliklər</li>
+        </ul>
+        <p>Neçə seans yetərlidir sualının cavabı ilk seansdan sonra bəlli olur, minimum 3-5 seans məsləhət görülür.</p>
+      </>
+    ),
+  },
+  {
+    title: 'Life Coach Seansı',
+    summary:
+      'Potensialınızı maksimuma çıxarmaq, güclü tərəflərinizi üzə çıxarmaq, özünə inamı və disiplini artırmaq üçün fərdi koçluq seansı.',
+    meta: ['50 dəqiqə'],
+    details: (
+      <>
+        <p>
+          Koç, rəsmi və qlobal təhsili olan, insanlara hədəflərinə çatmaları üçün dəstək olan mütəxəssisdir. Sizi olmaq
+          istədiyiniz nöqtəyə ən uyğun və rahat yolla çatdırmağa kömək edir.
+        </p>
+        <p>Hansı mövzularda seans almaq olar:</p>
+        <ul>
+          <li>Şəxsi inkişaf</li>
+          <li>Biznes, karyera</li>
+          <li>Ailə, uşaq münasibəti</li>
+          <li>Disiplin və s.</li>
+        </ul>
+        <p>
+          Koç əvvəlcə güclü bir dinləyicidir; özəl suallarla sizə fərqindəlik yaşadır, bir növ güzgü olub potensialınızı
+          üzə çıxarır və doğru addımları tapmağınıza şərait yaradır.
+        </p>
+      </>
+    ),
+  },
+  {
+    title: 'Bolluq-Bərəkət Seansı',
+    summary:
+      'Maddi axının qarşısındakı görünməyən blokları təmizləyən, bolluq şüurunu aktivləşdirən və daxili dəyər hissini yüksəldən xüsusi seans.',
+    meta: [],
+    details: (
+      <>
+        <p>Bu seans kimlər üçündür:</p>
+        <ul>
+          <li>Maddi axının qarşısında bloklar hiss edənlər</li>
+          <li>Eyni səylə çalışıb nəticə görə bilməyənlər</li>
+          <li>Öz dəyərini artırmaq, özünə icazə vermək istəyənlər</li>
+          <li>Qorxu və köhnə inanclardan azad olmaq istəyənlər</li>
+          <li>Həyatında daha çox firavanlıq görmək istəyənlər</li>
+        </ul>
+        <p>Seansda nələr olur: köhnə pul qorxularının şəfası, bolluq şüurunun aktivləşdirilməsi, enerji bloklarının yumşaldılması, daxili dəyər və icazə enerjisinin yüksəldilməsi.</p>
+        <p>Nəticələr: maddiyyata qarşı rahat münasibət, yeni imkan və gəlir axını, daha çox açılan qapılar, pul qəbul etmə enerjisinin güclənməsi.</p>
+      </>
+    ),
+  },
+  {
+    title: 'JAAS Seansı',
+    summary:
+      "Jean Adrienne's Clearing System — enerji protokolları və şüuraltı sorğu sistemləri ilə işləyən, strukturlaşdırılmış və dəqiq nəticəli bir metod.",
+    meta: ['16 yaş və yuxarı', '40-60 dəqiqə'],
+    details: (
+      <>
+        <p>Bu protokollar sayəsində:</p>
+        <ul>
+          <li>Sualın kök səbəbi dəqiq müəyyən edilir</li>
+          <li>Şüuraltı inancın hansı mərhələdə yarandığı aşkarlanır</li>
+          <li>Enerji blokunun mənbə nöqtəsi aydın görünür</li>
+          <li>Konkret "bəli/xeyr", "blok/axın" cavabları gəlir</li>
+          <li>Niyyətə uyğun enerji istiqaməti müəyyən olunur</li>
+        </ul>
+        <p>Seans hər kəs üçün təhlükəsizdir və fərdi enerji tələblərinə uyğun işlənir.</p>
+      </>
+    ),
+  },
+  {
+    title: 'Qadın Enerjisi Seansı',
+    summary:
+      'Qadının içində gizli qalan ilahi gücü oyatmaq, ruhani enerjisini yüksəltmək və həyatında bolluq, sevgi və harmoniya axınını aktivləşdirmək üçün hazırlanmış xüsusi seans.',
+    meta: [],
+    details: (
+      <>
+        <ul>
+          <li>Müqəddəs qadın yaradılışı ilə bağlantı — daxili gücün oyanması</li>
+          <li>Qadın enerjisinin artımı — zəriflik, cazibə, özünə dəyər, intuisiya</li>
+          <li>Bolluq kanalının açılması — qıtlıq və qorxu kodlarının təmizlənməsi</li>
+          <li>Ailə və sevgi kanalının şəfası — ana nəsli və keçmiş münasibətlərin təmizlənməsi</li>
+        </ul>
+        <p>
+          Seans sonunda özünə sevgi, özünə dəyər, güvən, sevgi və bolluğu qəbul etmə hissi ilə güclü bir enerji
+          proqramı yaradılır.
+        </p>
+        <p>
+          Kimlər üçündür: qadın enerjisini gücləndirmək, münasibətlərdə təkrar edən döngüləri dəyişmək, bolluq
+          kanalındakı bloku açmaq və özünə sevgini şəfalamaq istəyən hər bir qadın üçün.
+        </p>
+      </>
+    ),
+  },
 ];
 
-const testimonials = [
-  { name: 'Nigar M.', role: 'Müştəri', text: '"Peşəkar yanaşma və vaxtında təhvil üçün təşəkkürlər."' },
-  { name: 'Elvin R.', role: 'Həmkar', text: '"Yaradıcı fikirləri və məsuliyyəti ilə seçilir."' },
-  { name: 'Səbinə T.', role: 'Müştəri', text: '"Gözlədiyimdən daha yaxşı nəticə aldıq."' },
+const certificates = [
+  {
+    year: '2023',
+    items: [
+      'ThetaHealing — Basic DNA',
+      'ThetaHealing — Advanced DNA',
+      'ThetaHealing — Dig Deeper',
+      'ThetaHealing — You and the Creator',
+      'Life Coaching',
+      'Sadhu Therapy',
+    ],
+  },
+  { year: '2024', items: ['Kvant Therapy', 'Access Bars', 'Sound Healing', 'Access Body', 'Regression'] },
+  { year: '2025', items: ['ThetaHealing — Manifesting and Abundance', "JAAS — Jean Adrienne's Clearing System"] },
 ];
 
 export default function Home() {
@@ -40,16 +169,16 @@ export default function Home() {
     <>
       <div className="topbar">
         <div className="topbar-inner">
-          <span>info@aytenagayeva.com</span>
+          <span>{EMAIL}</span>
           <div className="topbar-socials">
-            <a href="https://www.instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram">
+            <a href={INSTAGRAM_LINK} target="_blank" rel="noreferrer" aria-label="Instagram">
               <IconInstagram />
             </a>
-            <a href="https://www.linkedin.com" target="_blank" rel="noreferrer" aria-label="LinkedIn">
-              <IconLinkedin />
+            <a href={YOUTUBE_LINK} target="_blank" rel="noreferrer" aria-label="YouTube">
+              <IconYoutube />
             </a>
-            <a href="https://github.com" target="_blank" rel="noreferrer" aria-label="GitHub">
-              <IconGithub />
+            <a href={WHATSAPP_LINK} target="_blank" rel="noreferrer" aria-label="WhatsApp">
+              <IconWhatsapp />
             </a>
           </div>
         </div>
@@ -65,17 +194,17 @@ export default function Home() {
               <a href="#about">Haqqımda</a>
             </li>
             <li>
-              <a href="#services">Xidmətlər</a>
+              <a href="#services">Seanslar</a>
             </li>
             <li>
-              <a href="#testimonials">Rəylər</a>
+              <a href="#certificates">Sertifikatlar</a>
             </li>
             <li>
-              <a href="#contact">Əlaqə</a>
+              <a href="#contact">Qeydiyyat</a>
             </li>
           </ul>
-          <a className="btn btn-primary" href="#contact">
-            Əlaqə saxla
+          <a className="btn btn-primary" href={WHATSAPP_LINK} target="_blank" rel="noreferrer">
+            WhatsApp ilə yaz
           </a>
         </div>
       </nav>
@@ -84,30 +213,29 @@ export default function Home() {
         <section id="top" className="hero container">
           <div className="hero-grid">
             <div>
-              <p className="eyebrow">Portfolio</p>
-              <h1>Salam, mən Aytən Ağayevayam</h1>
+              <p className="eyebrow">Ruhsal Yolculuğa Xoş Gəldin ✨</p>
+              <h1>Aytən Ağayeva</h1>
               <p className="lead">
-                Buraya özünüz haqqında qısa bir tanıtım cümləsi yazacaqsınız — kim
-                olduğunuz, nə ilə məşğul olduğunuz və nəyə üstünlük verdiyiniz.
+                Son illər ruhsal sağlamlığın önəmini bütün dünya anlayır. Elm qəbul etməyə başlayır ki, bütün
+                xəstəliklərin altında yatan keçmiş travmalardır. ThetaHealing şüuraltı meditasiya üsulu, enerji
+                praktikaları və şəxsi inkişaf seansları ilə sizə bu yolda rəhbərlik edirəm.
               </p>
-              <div className="rating-row">
-                <span className="stars">★★★★★</span>
-                <span>5.0 — məmnun müştərilər</span>
-              </div>
               <div className="btn-row">
                 <a className="btn btn-primary" href="#services">
-                  Xidmətlərimə bax
+                  Seanslara bax
                 </a>
-                <a className="btn btn-secondary" href="#contact">
-                  Əlaqə saxla
+                <a className="btn btn-secondary" href={WHATSAPP_LINK} target="_blank" rel="noreferrer">
+                  WhatsApp ilə əlaqə
                 </a>
               </div>
             </div>
             <div className="hero-media">
-              <div className="placeholder-photo">Şəkliniz buraya əlavə olunacaq</div>
+              <div className="hero-photo">
+                <Image src={atenPhoto} alt="Aytən Ağayeva — enerji seansı" placeholder="blur" priority />
+              </div>
               <div className="badge-float">
-                <strong>5+</strong>
-                <span>İl Təcrübə</span>
+                <strong>2023</strong>
+                <span>-dən bəri</span>
               </div>
             </div>
           </div>
@@ -116,7 +244,7 @@ export default function Home() {
         <section className="features">
           <div className="container">
             <div className="features-grid">
-              {features.map(({ icon: Icon, title, text }) => (
+              {specialties.map(({ icon: Icon, title, text }) => (
                 <div className="feature" key={title}>
                   <div className="feature-icon">
                     <Icon />
@@ -131,106 +259,136 @@ export default function Home() {
 
         <section id="services" className="container">
           <div className="section-head">
-            <p className="eyebrow">Xidmətlər</p>
-            <h2>Sizə Necə Kömək Edə Bilərəm</h2>
+            <p className="eyebrow">Seanslar</p>
+            <h2>Necə Kömək Edə Bilərəm</h2>
+            <p className="lead" style={{ margin: '0 auto' }}>
+              Hər kartın üzərinə klikləyərək ətraflı məlumatı görə bilərsiniz.
+            </p>
           </div>
           <div className="services-grid">
             {services.map((service) => (
-              <div className="card" key={service.title}>
-                <div className="card-media">Şəkil</div>
-                <div className="card-body">
-                  <h3>{service.title}</h3>
-                  <p>{service.text}</p>
-                  <a className="card-link" href="#contact">
-                    Ətraflı →
+              <details className="service-card" key={service.title}>
+                <summary>
+                  <div>
+                    <h3>{service.title}</h3>
+                    <p className="service-summary">{service.summary}</p>
+                    {service.meta.length > 0 && (
+                      <div className="service-meta">
+                        {service.meta.map((m) => (
+                          <span key={m}>{m}</span>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                  <svg className="chevron" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M6 9l6 6 6-6" />
+                  </svg>
+                </summary>
+                <div className="service-details">
+                  {service.details}
+                  <a className="service-cta" href={WHATSAPP_LINK} target="_blank" rel="noreferrer">
+                    Qeydiyyat üçün WhatsApp-da yazın →
                   </a>
                 </div>
-              </div>
+              </details>
             ))}
           </div>
         </section>
 
         <section id="about" className="about">
           <div className="container about-grid">
-            <div className="about-photo">Şəkliniz buraya əlavə olunacaq</div>
             <div>
               <p className="eyebrow">Haqqımda</p>
-              <h2>Təcrübə və Dəyərlərim</h2>
+              <h2>Şəxsi İnkişaf və Şüuraltı Transformasiya</h2>
               <p>
-                Bu bölmədə təhsiliniz, iş təcrübəniz və maraq dairəniz haqqında
-                bir-iki paraqraf yazıla bilər. Məzmunu göndərsəniz, birbaşa bura
-                əlavə edərəm.
+                Mən Aytən Ağayeva — şəxsi inkişaf, meditasiya və şüuraltı transformasiya sahəsində fəaliyyət
+                göstərirəm. 2023-cü ildən etibarən aktiv şəkildə fərdi və qrup seansları keçirirəm, online və canlı
+                workshoplar təşkil edirəm.
               </p>
-              <div className="stats-row">
+              <ul className="specialty-list">
+                <li>Şüuraltı blokların transformasiyası</li>
+                <li>Emosional balans və stresin azaldılması</li>
+                <li>Bolluq-bərəkət və niyyət çalışmaları</li>
+                <li>Enerji balanslama və intuitiv iş</li>
+                <li>Qadın enerjisi və daxili gücün aktivləşdirilməsi</li>
+                <li>Şəxsi inkişaf və həyat keyfiyyətinin yüksəldilməsi</li>
+              </ul>
+            </div>
+            <div>
+              <div className="stats-row" style={{ marginTop: 0 }}>
                 <div className="stat">
-                  <strong>5+</strong>
-                  <span>İl Təcrübə</span>
+                  <strong>2023</strong>
+                  <span>Fəaliyyətə başlama</span>
                 </div>
                 <div className="stat">
-                  <strong>20+</strong>
-                  <span>Layihə</span>
+                  <strong>2000+</strong>
+                  <span>İştirakçı</span>
                 </div>
                 <div className="stat">
-                  <strong>15+</strong>
-                  <span>Müştəri</span>
+                  <strong>5</strong>
+                  <span>Seans növü</span>
                 </div>
                 <div className="stat">
-                  <strong>98%</strong>
-                  <span>Məmnuniyyət</span>
+                  <strong>3</strong>
+                  <span>Dil (Az, Tr, Ru)</span>
                 </div>
               </div>
+              <p style={{ marginTop: '2rem' }}>
+                Studio Om Shri-də (Bakı) və online formatda seanslar keçirirəm; kütlə qarşısında sərbəst seans aparma,
+                intuitiv enerji oxuma və theta yönümlü meditasiya praktikaları üzərində ixtisaslaşmışam.
+              </p>
             </div>
           </div>
         </section>
 
-        <section id="testimonials" className="container">
+        <section id="certificates" className="container">
           <div className="section-head">
-            <p className="eyebrow">Rəylər</p>
-            <h2>Müştərilərim Nə Deyir</h2>
+            <p className="eyebrow">Sertifikatlar</p>
+            <h2>Təhsil və Sertifikatlar</h2>
           </div>
-          <div className="testimonials-grid">
-            {testimonials.map((t) => (
-              <div className="testimonial" key={t.name}>
-                <span className="stars">★★★★★</span>
-                <p>{t.text}</p>
-                <div className="testimonial-author">
-                  <div className="avatar">{t.name.charAt(0)}</div>
-                  <div>
-                    <strong>{t.name}</strong>
-                    <span>{t.role}</span>
-                  </div>
-                </div>
+          {certificates.map((group) => (
+            <div className="cert-year" key={group.year}>
+              <h3>{group.year}</h3>
+              <div className="cert-pills">
+                {group.items.map((item) => (
+                  <span className="cert-pill" key={item}>
+                    {item}
+                  </span>
+                ))}
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </section>
 
         <section className="container">
-          <div className="cta">
-            <h2>Birlikdə İşləyək</h2>
-            <p>Layihəniz haqqında danışmaq üçün mənimlə əlaqə saxlayın.</p>
-            <a className="btn btn-primary" href="#contact">
-              Əlaqə saxla
+          <div className="cta" id="contact">
+            <h2>Qeydiyyat</h2>
+            <p>
+              Seanslar online və Studio Om Shri-də (Bakı) keçirilir. Qeydiyyat üçün öncədən yazılmaq mütləqdir.
+              Qiymətlə bağlı məlumat WhatsApp-da veriləcək.
+            </p>
+            <a className="btn btn-primary" href={WHATSAPP_LINK} target="_blank" rel="noreferrer">
+              WhatsApp ilə yaz
             </a>
           </div>
         </section>
       </main>
 
-      <footer id="contact">
+      <footer>
         <div className="container">
           <div className="footer-grid">
             <div>
               <div className="footer-logo">Aytən Ağayeva</div>
-              <p>Şəxsi portfolio — layihələr, bacarıqlar və əlaqə məlumatları.</p>
+              <p>Şüuraltı seanslar, enerji praktikaları, meditasiya və şəxsi transformasiya.</p>
               <div className="footer-socials">
-                <a href="https://www.instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram">
+                <a href={INSTAGRAM_LINK} target="_blank" rel="noreferrer" aria-label="Instagram">
                   <IconInstagram />
                 </a>
-                <a href="https://www.linkedin.com" target="_blank" rel="noreferrer" aria-label="LinkedIn">
-                  <IconLinkedin />
+                <a href={YOUTUBE_LINK} target="_blank" rel="noreferrer" aria-label="YouTube">
+                  <IconYoutube />
                 </a>
-                <a href="https://github.com" target="_blank" rel="noreferrer" aria-label="GitHub">
-                  <IconGithub />
+                <a href={WHATSAPP_LINK} target="_blank" rel="noreferrer" aria-label="WhatsApp">
+                  <IconWhatsapp />
                 </a>
               </div>
             </div>
@@ -241,17 +399,17 @@ export default function Home() {
                   <a href="#about">Haqqımda</a>
                 </li>
                 <li>
-                  <a href="#services">Xidmətlər</a>
+                  <a href="#services">Seanslar</a>
                 </li>
                 <li>
-                  <a href="#testimonials">Rəylər</a>
+                  <a href="#certificates">Sertifikatlar</a>
                 </li>
               </ul>
             </div>
             <div className="footer-col">
-              <h4>Xidmətlər</h4>
+              <h4>Seanslar</h4>
               <ul>
-                {services.slice(0, 3).map((s) => (
+                {services.slice(0, 4).map((s) => (
                   <li key={s.title}>
                     <a href="#services">{s.title}</a>
                   </li>
@@ -262,18 +420,18 @@ export default function Home() {
               <h4>Əlaqə</h4>
               <ul>
                 <li>
-                  <a href="mailto:info@aytenagayeva.com">
-                    <IconMail /> &nbsp;info@aytenagayeva.com
+                  <a href={`mailto:${EMAIL}`}>
+                    <IconMail /> &nbsp;{EMAIL}
                   </a>
                 </li>
                 <li>
-                  <a href="tel:+994000000000">
-                    <IconPhone /> &nbsp;+994 00 000 00 00
+                  <a href={WHATSAPP_LINK} target="_blank" rel="noreferrer">
+                    <IconPhone /> &nbsp;{PHONE_DISPLAY}
                   </a>
                 </li>
                 <li>
                   <span>
-                    <IconMapPin /> &nbsp;Bakı, Azərbaycan
+                    <IconMapPin /> &nbsp;4 Əhməd Cavad, Bakı — Studio Om Shri
                   </span>
                 </li>
               </ul>

@@ -90,6 +90,42 @@ export function IconLinkedin(props) {
   );
 }
 
+export function IconHeart(props) {
+  return (
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" {...props}>
+      <path d="M12 20s-7-4.4-9.5-9A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 5c-2.5 4.6-9.5 9-9.5 9z" />
+    </svg>
+  );
+}
+
+export function IconCoin(props) {
+  return (
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" {...props}>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M9 15.5c.5.7 1.5 1 3 1 2 0 3-1 3-2.3S14 12 12 12s-3-.7-3-2 1-2.3 3-2.3 2.5.3 3 1" />
+      <path d="M12 6.5V8M12 16v1.5" />
+    </svg>
+  );
+}
+
+export function IconWhatsapp(props) {
+  return (
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" {...props}>
+      <path d="M4 20l1.3-3.8A7.9 7.9 0 1 1 8.5 19L4 20z" />
+      <path d="M8.5 8.8c.2-.5.5-.5.8-.5h.5c.2 0 .4 0 .6.4s.7 1.6.7 1.8-.1.3-.2.5l-.4.4c-.1.2-.2.3 0 .6.2.4.8 1.2 1.6 1.9.9.8 1.6 1 1.9 1.2.2.1.4.1.5-.1l.6-.7c.2-.2.4-.2.6-.1l1.5.8c.2.1.4.2.4.4 0 .5-.6 1.5-1.3 1.7-.6.2-1.3.3-3-.4-2.5-1-4-3.5-4.2-3.7-.1-.2-1-1.3-1-2.5 0-1.2.6-1.8.8-2.1z" />
+    </svg>
+  );
+}
+
+export function IconYoutube(props) {
+  return (
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" {...props}>
+      <rect x="2.5" y="6" width="19" height="12" rx="4" />
+      <path d="M10.5 9.5l5 2.5-5 2.5z" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
+
 export function IconGithub(props) {
   return (
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" {...props}>

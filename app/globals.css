@@ -229,6 +229,19 @@ h2 {
   border: 1px solid var(--border);
 }
 
+.hero-photo {
+  aspect-ratio: 4 / 5;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .badge-float {
   position: absolute;
   bottom: -1.25rem;
@@ -297,53 +310,97 @@ h2 {
   margin: 0;
 }
 
-/* Services / project cards */
+/* Services accordion cards */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
+  gap: 1.25rem;
 }
 
-.card {
+.service-card {
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  overflow: hidden;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  padding: 1.5rem 1.75rem;
 }
 
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 32px rgba(47, 51, 39, 0.08);
-}
-
-.card-media {
-  aspect-ratio: 16 / 10;
-  background: linear-gradient(160deg, #eef1e3 0%, #d3ddbc 100%);
+.service-card summary {
+  cursor: pointer;
+  list-style: none;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  color: rgba(47, 51, 39, 0.5);
-  font-size: 0.85rem;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
 }
 
-.card-body {
-  padding: 1.5rem;
+.service-card summary::-webkit-details-marker {
+  display: none;
 }
 
-.card h3 {
-  margin: 0 0 0.5rem;
-  font-size: 1.1rem;
+.service-card summary .chevron {
+  flex: none;
+  color: var(--accent-dark);
+  transition: transform 0.15s ease;
+  margin-top: 0.3rem;
 }
 
-.card p {
+.service-card[open] summary .chevron {
+  transform: rotate(180deg);
+}
+
+.service-card h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1.2rem;
+}
+
+.service-card .service-summary {
   color: var(--muted);
-  margin: 0 0 1rem;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.service-meta {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin: 1rem 0 0;
+}
+
+.service-meta span {
+  background: var(--bg-alt);
+  border-radius: 999px;
+  padding: 0.3rem 0.85rem;
+  font-size: 0.8rem;
+  color: var(--accent-dark);
+  font-weight: 600;
+}
+
+.service-details {
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
   font-size: 0.92rem;
 }
 
-.card-link {
-  font-size: 0.88rem;
+.service-details p {
+  margin: 0 0 0.9rem;
+}
+
+.service-details ul {
+  margin: 0 0 0.9rem;
+  padding-left: 1.1rem;
+  columns: 2;
+  column-gap: 1.5rem;
+}
+
+.service-details li {
+  margin-bottom: 0.35rem;
+  break-inside: avoid;
+}
+
+.service-cta {
+  display: inline-block;
+  margin-top: 0.25rem;
   font-weight: 600;
   color: var(--accent-dark);
   text-decoration: none;
@@ -361,18 +418,30 @@ h2 {
   align-items: center;
 }
 
-.about-photo {
-  aspect-ratio: 4 / 3;
-  border-radius: var(--radius);
-  background: linear-gradient(160deg, #e4e9d6 0%, #a9bb84 100%);
-  border: 1px solid var(--border);
+.specialty-list {
+  list-style: none;
+  margin: 1.25rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.specialty-list li {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  color: rgba(47, 51, 39, 0.55);
-  font-size: 0.9rem;
-  text-align: center;
-  padding: 1rem;
+  align-items: flex-start;
+  gap: 0.6rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.specialty-list li::before {
+  content: '';
+  flex: none;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  margin-top: 0.5rem;
 }
 
 .about p {
@@ -398,59 +467,33 @@ h2 {
   color: var(--muted);
 }
 
-/* Testimonials */
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
+/* Certificates */
+.cert-year {
+  margin-bottom: 1.75rem;
 }
 
-.testimonial {
-  background: var(--card);
+.cert-year:last-child {
+  margin-bottom: 0;
+}
+
+.cert-year h3 {
+  font-size: 1rem;
+  color: var(--accent-dark);
+  margin: 0 0 0.75rem;
+}
+
+.cert-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.cert-pill {
+  background: var(--bg-alt);
   border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 1.75rem;
-}
-
-.testimonial .stars {
-  display: block;
-  margin-bottom: 0.75rem;
-}
-
-.testimonial p {
-  color: var(--text);
-  font-size: 0.95rem;
-  margin: 0 0 1.25rem;
-}
-
-.testimonial-author {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-
-.avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: var(--accent);
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  font-size: 0.85rem;
-}
-
-.testimonial-author strong {
-  display: block;
-  font-size: 0.9rem;
-}
-
-.testimonial-author span {
-  display: block;
-  font-size: 0.8rem;
-  color: var(--muted);
+  border-radius: 999px;
+  padding: 0.5rem 1.1rem;
+  font-size: 0.88rem;
 }
 
 /* CTA */
