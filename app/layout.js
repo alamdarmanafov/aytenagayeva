@@ -29,6 +29,9 @@ export const metadata = {
     locale: 'az_AZ',
     type: 'website',
   },
+  verification: {
+    google: 's3PJHz3c7zsq_S2ZP_aGmhNJDCzW4Lb6V8mlWfTrTyk',
+  },
 };
 
 export default function RootLayout({ children }) {
