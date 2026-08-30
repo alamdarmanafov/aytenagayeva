@@ -677,4 +677,17 @@ footer {
   .footer-grid {
     grid-template-columns: 1fr 1fr;
   }
+
+  .nav-inner .btn {
+    padding: 0.55rem 1rem;
+    font-size: 0.8rem;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.85rem;
+  }
 }
