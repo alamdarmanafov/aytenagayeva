@@ -163,6 +163,32 @@ const services = [
       </>
     ),
   },
+  {
+    photo: aboutPhoto,
+    title: 'Sadhu Təlimi',
+    summary:
+      'Hind mistikasının sirli yolu — özünə qayıdış təlimi. 4 günlük transformativ proqram sonunda terapist olub seanslar etmək hüququ verən sertifikat təqdim olunur.',
+    meta: ['4 gün', 'Fərdi: 790 AZN', 'Qrup: 490 AZN'],
+    details: (
+      <>
+        <p>Sadhu təlimi sənə nə verir:</p>
+        <ul>
+          <li>Terapist olub seanslar etmə hüququ</li>
+          <li>Zehni sakitlik və diqqət</li>
+          <li>Ruhsal yüksəliş və fərqindəlik</li>
+          <li>Stressdən və mənasız təlaşdan azadlıq</li>
+          <li>Daxili güc və intuisiyanın oyadılması</li>
+          <li>Öz yolunu, məqsədini kəşf etmək</li>
+          <li>Qorxulardan, keçmişdən və yorğunluqdan azad olmaq üçün fürsət</li>
+        </ul>
+        <p>
+          Bu yol nə dini, nə də adi təlimdir — özünə qayıdışdır. Ağlını deyil, ruhunu dinlə. Təlim sonunda sertifikat
+          təqdim olunur.
+        </p>
+        <p>Fərdi təlim 790 AZN, qrup təlimi 490 AZN. 2 hissəli ödəniş mümkündür.</p>
+      </>
+    ),
+  },
 ];
 
 const certificates = [
@@ -434,20 +460,21 @@ export default function Home() {
               <p className="eyebrow">Rəylər</p>
               <h2>Müştərilərimin Söylədikləri</h2>
             </div>
-            <div className="testimonials-grid">
-              {testimonials.map((quote, i) => (
-                <div className="testimonial-card" key={i}>
-                  <span className="testimonial-quote">"</span>
-                  <p>{quote}</p>
-                </div>
-              ))}
+            <div className="testimonials-slider">
+              <div className="testimonials-track">
+                {[...testimonials, ...testimonials].map((quote, i) => (
+                  <div className="testimonial-card" key={i}>
+                    <span className="stars">★★★★★</span>
+                    <p>{quote}</p>
+                  </div>
+                ))}
+              </div>
             </div>
-            <p className="testimonials-more">
-              Daha çox real rəy üçün:{' '}
-              <a href={INSTAGRAM_REVIEWS_LINK} target="_blank" rel="noreferrer">
-                Instagram — Nəticələr
+            <div className="testimonials-more">
+              <a className="btn btn-secondary" href={INSTAGRAM_REVIEWS_LINK} target="_blank" rel="noreferrer">
+                Daha çox rəy — Instagram
               </a>
-            </p>
+            </div>
           </div>
         </section>
 
