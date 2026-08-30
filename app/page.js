@@ -9,8 +9,8 @@ import {
   IconWhatsapp,
   IconYoutube,
 } from './icons';
-import heroPhoto from '../public/images/photos/session-in-progress.jpg';
-import aboutPhoto from '../public/images/photos/portrait-studio.jpg';
+import heroPhoto from '../public/images/photos/portrait-studio.jpg';
+import aboutPhoto from '../public/images/photos/session-in-progress.jpg';
 import headshotPhoto from '../public/images/photos/headshot.jpg';
 import certBasicDna from '../public/images/certificates/basic-dna.jpg';
 import certBasicDnaFull from '../public/images/certificates/basic-dna-full.jpg';
@@ -249,7 +249,7 @@ export default function Home() {
             </div>
             <div className="hero-media">
               <div className="hero-photo">
-                <Image src={heroPhoto} alt="Aytən Ağayeva — səs terapiyası seansı" placeholder="blur" priority />
+                <Image src={heroPhoto} alt="Aytən Ağayeva — Studio Om Shri" placeholder="blur" priority />
               </div>
               <div className="badge-float">
                 <strong>2023</strong>
@@ -318,7 +318,7 @@ export default function Home() {
         <section id="about" className="about">
           <div className="container about-grid">
             <div className="hero-photo">
-              <Image src={aboutPhoto} alt="Aytən Ağayeva — Studio Om Shri" placeholder="blur" />
+              <Image src={aboutPhoto} alt="Aytən Ağayeva — səs terapiyası seansı" placeholder="blur" />
             </div>
             <div>
               <p className="eyebrow">Haqqımda</p>
