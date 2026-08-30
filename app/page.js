@@ -165,6 +165,35 @@ const services = [
   },
   {
     photo: aboutPhoto,
+    title: 'Sound Healing',
+    summary:
+      'Səsin, vibrasiyanın və ruhun dərinliyindəki enerjinin görüşdüyü təcrübə. Tibet kasaları, kristal kasalar və digər vibrasion alətlərlə dərin meditativ vəziyyətə keçid.',
+    meta: ['2 saat', '300 AZN'],
+    details: (
+      <>
+        <p>
+          Bədən yalnız fiziki bir quruluş deyil — yaşadığımız hadisələrin, duyğuların, düşüncələrin və enerjinin
+          izlərini daşıyan bir yaddaş sahəsidir. Sound Healing seansı insanın enerji sahəsi və çakraları ilə işləməyə,
+          daxildə yığılıb qalmış və artıq xidmət etməyən enerjini buraxmağa, ruh və bədən arasında daha dərin bir əlaqə
+          yaratmağa yönəlmiş spiritual praktikadır.
+        </p>
+        <p>Sound Healing sənə nə verə bilər:</p>
+        <ul>
+          <li>Dərin rahatlama və meditativ vəziyyət</li>
+          <li>Enerjinin yenilənməsi və yüngüllük hissi</li>
+          <li>Öz bədənini və duyğularını daha dərindən hiss etmək</li>
+          <li>Daxili sakitlik və zehni susqunluq</li>
+          <li>Emosional boşalma və buraxma təcrübəsi</li>
+          <li>Çakralarla bağlı fərqindəliyin artması</li>
+          <li>Özünlə və daxili dünyanla əlaqənin güclənməsi</li>
+          <li>Ruhani praktikaya daha dərindən bağlanmaq</li>
+          <li>Gündəlik həyatın səs-küyündən uzaqlaşıb özünə qayıtmaq</li>
+        </ul>
+      </>
+    ),
+  },
+  {
+    photo: heroPhoto,
     title: 'Sadhu Təlimi',
     summary:
       'Hind mistikasının sirli yolu — özünə qayıdış təlimi. 4 günlük transformativ proqram sonunda terapist olub seanslar etmək hüququ verən sertifikat təqdim olunur.',
@@ -344,7 +373,7 @@ export default function Home() {
               <a href="#services">Seanslar</a>
             </li>
             <li>
-              <a href="#packages">Paketlər</a>
+              <a href="#packages">Paket Seanslar</a>
             </li>
             <li>
               <a href="#certificates">Sertifikatlar</a>
@@ -458,7 +487,7 @@ export default function Home() {
         <section id="packages">
           <div className="container">
             <div className="section-head">
-              <p className="eyebrow">Paketlər</p>
+              <p className="eyebrow">Paket Seanslar</p>
               <h2>Çox Aylıq Proqramlar</h2>
               <p className="lead" style={{ margin: '0 auto' }}>
                 Bir mövzu üzərində daha dərin işləmək istəyənlər üçün seanslardan ibarət paketlər.
@@ -641,7 +670,7 @@ export default function Home() {
                   <a href="#services">Seanslar</a>
                 </li>
                 <li>
-                  <a href="#packages">Paketlər</a>
+                  <a href="#packages">Paket Seanslar</a>
                 </li>
                 <li>
                   <a href="#certificates">Sertifikatlar</a>
