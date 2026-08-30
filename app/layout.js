@@ -1,6 +1,8 @@
+import './globals.css';
+
 export const metadata = {
   title: 'Aytən Ağayeva',
-  description: 'aytenagayeva.com',
+  description: 'Aytən Ağayeva — şəxsi portfolio saytı',
 };
 
 export default function RootLayout({ children }) {
