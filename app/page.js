@@ -12,7 +12,15 @@ import {
   IconWhatsapp,
   IconYoutube,
 } from './icons';
-import atenPhoto from '../public/images/ayten-seans.jpg';
+import heroPhoto from '../public/images/photos/session-in-progress.jpg';
+import aboutPhoto from '../public/images/photos/portrait-studio.jpg';
+import headshotPhoto from '../public/images/photos/headshot.jpg';
+import certBasicDna from '../public/images/certificates/basic-dna.jpg';
+import certAdvancedDna from '../public/images/certificates/advanced-dna.jpg';
+import certYouAndCreator from '../public/images/certificates/you-and-creator.jpg';
+import certDigDeeper from '../public/images/certificates/dig-deeper.jpg';
+import certManifesting from '../public/images/certificates/manifesting-abundance.jpg';
+import certJaas from '../public/images/certificates/jaas.jpg';
 
 const WHATSAPP_LINK = 'https://wa.me/994708768657';
 const YOUTUBE_LINK = 'https://youtube.com/@ruhsaloyanis';
@@ -151,17 +159,27 @@ const services = [
 const certificates = [
   {
     year: '2023',
-    items: [
-      'ThetaHealing — Basic DNA',
-      'ThetaHealing — Advanced DNA',
-      'ThetaHealing — Dig Deeper',
-      'ThetaHealing — You and the Creator',
-      'Life Coaching',
-      'Sadhu Therapy',
+    images: [
+      { src: certBasicDna, label: 'ThetaHealing — Basic DNA' },
+      { src: certAdvancedDna, label: 'ThetaHealing — Advanced DNA' },
+      { src: certDigDeeper, label: 'ThetaHealing — Dig Deeper' },
+      { src: certYouAndCreator, label: 'ThetaHealing — You and the Creator' },
     ],
+    pills: ['Life Coaching', 'Sadhu Therapy'],
   },
-  { year: '2024', items: ['Kvant Therapy', 'Access Bars', 'Sound Healing', 'Access Body', 'Regression'] },
-  { year: '2025', items: ['ThetaHealing — Manifesting and Abundance', "JAAS — Jean Adrienne's Clearing System"] },
+  {
+    year: '2024',
+    images: [],
+    pills: ['Kvant Therapy', 'Access Bars', 'Sound Healing', 'Access Body', 'Regression'],
+  },
+  {
+    year: '2025',
+    images: [
+      { src: certManifesting, label: 'ThetaHealing — Manifesting and Abundance' },
+      { src: certJaas, label: "JAAS — Jean Adrienne's Clearing System" },
+    ],
+    pills: [],
+  },
 ];
 
 export default function Home() {
@@ -231,7 +249,7 @@ export default function Home() {
             </div>
             <div className="hero-media">
               <div className="hero-photo">
-                <Image src={atenPhoto} alt="Aytən Ağayeva — enerji seansı" placeholder="blur" priority />
+                <Image src={heroPhoto} alt="Aytən Ağayeva — səs terapiyası seansı" placeholder="blur" priority />
               </div>
               <div className="badge-float">
                 <strong>2023</strong>
@@ -297,6 +315,9 @@ export default function Home() {
 
         <section id="about" className="about">
           <div className="container about-grid">
+            <div className="hero-photo">
+              <Image src={aboutPhoto} alt="Aytən Ağayeva — Studio Om Shri" placeholder="blur" />
+            </div>
             <div>
               <p className="eyebrow">Haqqımda</p>
               <h2>Şəxsi İnkişaf və Şüuraltı Transformasiya</h2>
@@ -314,29 +335,25 @@ export default function Home() {
                 <li>Şəxsi inkişaf və həyat keyfiyyətinin yüksəldilməsi</li>
               </ul>
             </div>
-            <div>
-              <div className="stats-row" style={{ marginTop: 0 }}>
-                <div className="stat">
-                  <strong>2023</strong>
-                  <span>Fəaliyyətə başlama</span>
-                </div>
-                <div className="stat">
-                  <strong>2000+</strong>
-                  <span>İştirakçı</span>
-                </div>
-                <div className="stat">
-                  <strong>5</strong>
-                  <span>Seans növü</span>
-                </div>
-                <div className="stat">
-                  <strong>3</strong>
-                  <span>Dil (Az, Tr, Ru)</span>
-                </div>
+          </div>
+          <div className="container">
+            <div className="stats-row">
+              <div className="stat">
+                <strong>2023</strong>
+                <span>Fəaliyyətə başlama</span>
               </div>
-              <p style={{ marginTop: '2rem' }}>
-                Studio Om Shri-də (Bakı) və online formatda seanslar keçirirəm; kütlə qarşısında sərbəst seans aparma,
-                intuitiv enerji oxuma və theta yönümlü meditasiya praktikaları üzərində ixtisaslaşmışam.
-              </p>
+              <div className="stat">
+                <strong>2000+</strong>
+                <span>İştirakçı</span>
+              </div>
+              <div className="stat">
+                <strong>5</strong>
+                <span>Seans növü</span>
+              </div>
+              <div className="stat">
+                <strong>3</strong>
+                <span>Dil (Az, Tr, Ru)</span>
+              </div>
             </div>
           </div>
         </section>
@@ -349,19 +366,40 @@ export default function Home() {
           {certificates.map((group) => (
             <div className="cert-year" key={group.year}>
               <h3>{group.year}</h3>
-              <div className="cert-pills">
-                {group.items.map((item) => (
-                  <span className="cert-pill" key={item}>
-                    {item}
-                  </span>
-                ))}
-              </div>
+              {group.images.length > 0 && (
+                <div className="cert-grid">
+                  {group.images.map((cert) => (
+                    <a
+                      className="cert-thumb"
+                      key={cert.label}
+                      href={cert.src.src}
+                      target="_blank"
+                      rel="noreferrer"
+                      title={cert.label}
+                    >
+                      <Image src={cert.src} alt={cert.label} placeholder="blur" />
+                    </a>
+                  ))}
+                </div>
+              )}
+              {group.pills.length > 0 && (
+                <div className="cert-pills">
+                  {group.pills.map((item) => (
+                    <span className="cert-pill" key={item}>
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              )}
             </div>
           ))}
         </section>
 
         <section className="container">
           <div className="cta" id="contact">
+            <div className="cta-avatar">
+              <Image src={headshotPhoto} alt="Aytən Ağayeva" placeholder="blur" />
+            </div>
             <h2>Qeydiyyat</h2>
             <p>
               Seanslar online və Studio Om Shri-də (Bakı) keçirilir. Qeydiyyat üçün öncədən yazılmaq mütləqdir.

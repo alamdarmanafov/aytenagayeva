@@ -482,6 +482,34 @@ h2 {
   margin: 0 0 0.75rem;
 }
 
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.cert-thumb {
+  display: block;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  aspect-ratio: 4 / 3;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.cert-thumb:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgba(47, 51, 39, 0.1);
+}
+
+.cert-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .cert-pills {
   display: flex;
   flex-wrap: wrap;
@@ -504,6 +532,22 @@ h2 {
   border-radius: var(--radius);
   margin: 0 1.5rem;
   padding: 3.5rem 2rem;
+}
+
+.cta-avatar {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 1.25rem;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+.cta-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
 }
 
 .cta h2 {
