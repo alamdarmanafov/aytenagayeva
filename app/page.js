@@ -191,6 +191,88 @@ const services = [
   },
 ];
 
+const packages = [
+  {
+    title: 'Qadınlıq Enerjisi Paketi',
+    duration: '3 aylıq proqram · 3 seans',
+    price: '450 AZN',
+    sessions: [
+      'Negativ inanc və enerji təmizliyi, qorxuların şəfalanması',
+      'Ana nəsli şəfası, ana bətni şəfası, qadınlığı qəbullanma',
+      'Qadınlıq enerji artımı meditasiyası',
+    ],
+  },
+  {
+    title: 'Daxili Hüzur və Sevgi Dolu Yaşam Paketi',
+    duration: '3 aylıq proqram · 3 seans',
+    price: '500 AZN',
+    sessions: [
+      'ThetaHealing (daxili hüzur, öz dəyər, öz sevgi)',
+      'Kvant terapiya (keçmişi qəbullanma və bağışlayıb azadlaşmaq)',
+      'Mini reqressiya (keçmiş yaşamlardan özüylə barışma, nəsli qəbullanma və azadlaşmaq)',
+    ],
+  },
+  {
+    title: 'Maddi Artım Paketi',
+    duration: '6 aylıq proqram · 6 seans',
+    price: '1160 AZN',
+    sessions: [
+      'ThetaHealing (təmizlənmə və pozitiv inanc yüklənmələri)',
+      'Bolluq-bərəkət (gəlir kanalının genişlənməsi)',
+      'Mini reqressiya',
+      'Kvant terapiya (rituallar)',
+      'Disiplin, aktiv həyat planı qurulması',
+      'Zənginlik meditasiyası (beyin kodlama)',
+    ],
+  },
+  {
+    title: 'Ruh Əşi, Sevgi və Ailə Münasibətləri Paketi',
+    duration: '3 aylıq proqram · 3 seans',
+    price: '500 AZN',
+    sessions: [
+      'Qorxuların təmizlənməsi, keçmiş münasibətlərlə bağ kəsmə, ana bətni şəfası',
+      'Öz dəyər, öz sevgi, öz güvən, ideal formanı yaratma meditasiyası',
+      'Ruh əşi seansı (manifest meditasiya)',
+    ],
+  },
+  {
+    title: 'Negativ Enerji Təmizliyi Paketi',
+    duration: '3 aylıq proqram · 3 seans',
+    price: '450 AZN',
+    sessions: [
+      'Energetik mətizlənmə (cadu, nəzər, nəfs, bədduaların ləğvi)',
+      'Qoruma enerjisinin qoyulması',
+      'Karmik vəziyyətlərin şəfalanması (nəsil şəfası)',
+    ],
+  },
+  {
+    title: 'Arzuları Reallaşdırma Paketi',
+    duration: '6 aylıq proqram · 6 seans',
+    price: '1600 AZN',
+    sessions: [
+      'Dərin ThetaHealing (energetik təmizlənmə, şəfalanma)',
+      'Kvant terapiya (rituallar, daxilindəki uşaq terapiyası)',
+      'Bolluq-bərəkət (gəlirin artırılması)',
+      'Yaradım meditasiyası (manifestasiya)',
+      'Planlama və disiplin cədvəlinin qurulması',
+      'Mini reqressiya (keçmiş yaşamlardan gələn karmaların şəfalanması)',
+    ],
+  },
+  {
+    title: 'Ailə Münasibətləri Paketi',
+    duration: '5 aylıq proqram · 6 seans',
+    price: '900 AZN',
+    sessions: [
+      'Təmizlənmə, arınma, qırılmış ruhun bərpası, çakra şəfası',
+      'Yoldaşla olan travmaların ümumi şəfalanması',
+      'Daxili sistemin bərpa olunması',
+      'Ailə münasibətlərinə açılan ümumi şəfalanma — rituallarla ailə bərəkətinin artımı',
+      'Ana və ana nəsli şəfası',
+      'Manifestasiya, pozitiv enerji və inanc yüklənmələri',
+    ],
+  },
+];
+
 const certificates = [
   {
     year: '2023',
@@ -260,6 +342,9 @@ export default function Home() {
             </li>
             <li>
               <a href="#services">Seanslar</a>
+            </li>
+            <li>
+              <a href="#packages">Paketlər</a>
             </li>
             <li>
               <a href="#certificates">Sertifikatlar</a>
@@ -365,6 +450,37 @@ export default function Home() {
                     </a>
                   </div>
                 </details>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="packages">
+          <div className="container">
+            <div className="section-head">
+              <p className="eyebrow">Paketlər</p>
+              <h2>Çox Aylıq Proqramlar</h2>
+              <p className="lead" style={{ margin: '0 auto' }}>
+                Bir mövzu üzərində daha dərin işləmək istəyənlər üçün seanslardan ibarət paketlər.
+              </p>
+            </div>
+            <div className="packages-grid">
+              {packages.map((pkg) => (
+                <div className="package-card" key={pkg.title}>
+                  <div className="package-head">
+                    <h3>{pkg.title}</h3>
+                    <span className="package-price">{pkg.price}</span>
+                  </div>
+                  <p className="package-duration">{pkg.duration}</p>
+                  <ul>
+                    {pkg.sessions.map((s) => (
+                      <li key={s}>{s}</li>
+                    ))}
+                  </ul>
+                  <a className="service-cta" href={WHATSAPP_LINK} target="_blank" rel="noreferrer">
+                    Qeydiyyat üçün WhatsApp-da yazın →
+                  </a>
+                </div>
               ))}
             </div>
           </div>
@@ -523,6 +639,9 @@ export default function Home() {
                 </li>
                 <li>
                   <a href="#services">Seanslar</a>
+                </li>
+                <li>
+                  <a href="#packages">Paketlər</a>
                 </li>
                 <li>
                   <a href="#certificates">Sertifikatlar</a>
