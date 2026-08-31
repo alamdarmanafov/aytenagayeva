@@ -25,6 +25,12 @@ export default function Header() {
           <a className="nav-logo" href="/">
             Aytən Ağayeva
           </a>
+          <input type="checkbox" id="nav-toggle" className="nav-toggle-checkbox" />
+          <label htmlFor="nav-toggle" className="nav-burger" aria-label="Menyu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
           <ul className="nav-links">
             <li>
               <a href="/#about">Haqqımda</a>

@@ -110,9 +110,9 @@ export function IconCoin(props) {
 
 export function IconWhatsapp(props) {
   return (
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" {...props}>
-      <path d="M4 20l1.3-3.8A7.9 7.9 0 1 1 8.5 19L4 20z" />
-      <path d="M8.5 8.8c.2-.5.5-.5.8-.5h.5c.2 0 .4 0 .6.4s.7 1.6.7 1.8-.1.3-.2.5l-.4.4c-.1.2-.2.3 0 .6.2.4.8 1.2 1.6 1.9.9.8 1.6 1 1.9 1.2.2.1.4.1.5-.1l.6-.7c.2-.2.4-.2.6-.1l1.5.8c.2.1.4.2.4.4 0 .5-.6 1.5-1.3 1.7-.6.2-1.3.3-3-.4-2.5-1-4-3.5-4.2-3.7-.1-.2-1-1.3-1-2.5 0-1.2.6-1.8.8-2.1z" />
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" {...props}>
+      <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
+      <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
     </svg>
   );
 }
