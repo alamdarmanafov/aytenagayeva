@@ -1,4 +1,6 @@
 import './globals.css';
+import { IconWhatsapp } from './icons';
+import { WHATSAPP_LINK } from './constants';
 
 const title = 'Aytən Ağayeva — ThetaHealing, Enerji Seansları və Life Coaching';
 const description =
@@ -51,7 +53,18 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="az">
-      <body>{children}</body>
+      <body>
+        {children}
+        <a
+          className="whatsapp-float"
+          href={WHATSAPP_LINK}
+          target="_blank"
+          rel="noreferrer"
+          aria-label="WhatsApp ilə əlaqə"
+        >
+          <IconWhatsapp />
+        </a>
+      </body>
     </html>
   );
 }

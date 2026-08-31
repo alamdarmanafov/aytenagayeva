@@ -1,14 +1,8 @@
 import Image from 'next/image';
-import {
-  IconLeaf,
-  IconHeart,
-  IconCoin,
-  IconSpark,
-  IconUsers,
-  IconInstagram,
-  IconWhatsapp,
-  IconYoutube,
-} from './icons';
+import { IconLeaf, IconHeart, IconCoin, IconSpark, IconUsers } from './icons';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import { WHATSAPP_LINK, INSTAGRAM_REVIEWS_LINK } from './constants';
 import heroPhoto from '../public/images/photos/portrait-studio.jpg';
 import aboutPhoto from '../public/images/photos/session-in-progress.jpg';
 import headshotPhoto from '../public/images/photos/headshot.jpg';
@@ -25,281 +19,12 @@ import certManifestingFull from '../public/images/certificates/manifesting-abund
 import certJaas from '../public/images/certificates/jaas.jpg';
 import certJaasFull from '../public/images/certificates/jaas-full.jpg';
 
-const WHATSAPP_LINK = 'https://wa.me/994708768657';
-const YOUTUBE_LINK = 'https://youtube.com/@ruhsaloyanis';
-const INSTAGRAM_LINK = 'https://instagram.com/ayten.ga';
-
 const specialties = [
   { icon: IconLeaf, title: 'Şüuraltı Transformasiya', text: 'Şüuraltı blokların və keçmiş travmaların şəfalandırılması.' },
   { icon: IconHeart, title: 'Emosional Balans', text: 'Stresin azaldılması və emosional tarazlığın bərpası.' },
   { icon: IconCoin, title: 'Bolluq-Bərəkət', text: 'Niyyət çalışmaları ilə bolluq şüurunun aktivləşdirilməsi.' },
   { icon: IconSpark, title: 'Enerji Balanslama', text: 'İntuitiv enerji oxuma və balanslama praktikaları.' },
   { icon: IconUsers, title: 'Qadın Enerjisi', text: 'Daxili gücün və qadınlıq enerjisinin aktivləşdirilməsi.' },
-];
-
-const services = [
-  {
-    photo: aboutPhoto,
-    title: 'ThetaHealing — Şüuraltı Seans',
-    summary:
-      'Problemlərin şüuraltı səbəblərini müəyyən edib dərhal şəfalandırmağa imkan yaradan effektiv texnika. Beynimizdəki mənfi inancları, enerji tıxanıqlarını və travmaları aradan qaldırır.',
-    meta: ['16 yaş və yuxarı', 'İlk 2 seans 1 saat 30 dəq', 'Sonra 1 saat', 'Ayda 1 dəfə'],
-    details: (
-      <>
-        <p>Hansı mövzular üzərində işləmək olar:</p>
-        <ul>
-          <li>Ana və atadan gələn travmalar</li>
-          <li>Ana bətni</li>
-          <li>Evlilik</li>
-          <li>Atılmaq</li>
-          <li>Təcavüz</li>
-          <li>Karyera</li>
-          <li>Fobiyalar</li>
-          <li>Sevilməmə</li>
-          <li>Dəyərsizlik</li>
-          <li>Rədd edilmə</li>
-          <li>Münasibətlər</li>
-          <li>Bolluq bərəkət</li>
-          <li>Ölüm qorxusu</li>
-          <li>Həyatda özünü tapma</li>
-          <li>Fiziki və ruhi gərginliklər</li>
-        </ul>
-        <p>
-          İlk 2 seans 1 saat 30 dəqiqə çəkir, sonrakı seanslar isə 1 saat davam edir. Neçə seans yetərlidir sualının
-          cavabı ilk seansdan sonra bəlli olur, minimum 3-5 seans məsləhət görülür.
-        </p>
-      </>
-    ),
-  },
-  {
-    photo: heroPhoto,
-    title: 'Life Coach Seansı',
-    summary:
-      'Potensialınızı maksimuma çıxarmaq, güclü tərəflərinizi üzə çıxarmaq, özünə inamı və disiplini artırmaq üçün fərdi koçluq seansı.',
-    meta: ['50 dəqiqə'],
-    details: (
-      <>
-        <p>
-          Koç, rəsmi və qlobal təhsili olan, insanlara hədəflərinə çatmaları üçün dəstək olan mütəxəssisdir. Sizi olmaq
-          istədiyiniz nöqtəyə ən uyğun və rahat yolla çatdırmağa kömək edir.
-        </p>
-        <p>Hansı mövzularda seans almaq olar:</p>
-        <ul>
-          <li>Şəxsi inkişaf</li>
-          <li>Biznes, karyera</li>
-          <li>Ailə, uşaq münasibəti</li>
-          <li>Disiplin və s.</li>
-        </ul>
-        <p>
-          Koç əvvəlcə güclü bir dinləyicidir; özəl suallarla sizə fərqindəlik yaşadır, bir növ güzgü olub potensialınızı
-          üzə çıxarır və doğru addımları tapmağınıza şərait yaradır.
-        </p>
-      </>
-    ),
-  },
-  {
-    photo: headshotPhoto,
-    title: 'Bolluq-Bərəkət Seansı',
-    summary:
-      'Maddi axının qarşısındakı görünməyən blokları təmizləyən, bolluq şüurunu aktivləşdirən və daxili dəyər hissini yüksəldən xüsusi seans.',
-    meta: [],
-    details: (
-      <>
-        <p>Bu seans kimlər üçündür:</p>
-        <ul>
-          <li>Maddi axının qarşısında bloklar hiss edənlər</li>
-          <li>Eyni səylə çalışıb nəticə görə bilməyənlər</li>
-          <li>Öz dəyərini artırmaq, özünə icazə vermək istəyənlər</li>
-          <li>Qorxu və köhnə inanclardan azad olmaq istəyənlər</li>
-          <li>Həyatında daha çox firavanlıq görmək istəyənlər</li>
-        </ul>
-        <p>Seansda nələr olur: köhnə pul qorxularının şəfalandırılması, bolluq şüurunun aktivləşdirilməsi, enerji bloklarının yumşaldılması, daxili dəyər və icazə enerjisinin yüksəldilməsi.</p>
-        <p>Nəticələr: maddiyyata qarşı rahat münasibət, yeni imkan və gəlir axını, daha çox açılan qapılar, pul qəbul etmə enerjisinin güclənməsi.</p>
-      </>
-    ),
-  },
-  {
-    photo: aboutPhoto,
-    title: 'JAAS Seansı',
-    summary:
-      "Jean Adrienne's Clearing System — enerji protokolları və şüuraltı sorğu sistemləri ilə işləyən, strukturlaşdırılmış və dəqiq nəticəli bir metod.",
-    meta: ['16 yaş və yuxarı', '40-60 dəqiqə'],
-    details: (
-      <>
-        <p>Bu protokollar sayəsində:</p>
-        <ul>
-          <li>Sualın kök səbəbi dəqiq müəyyən edilir</li>
-          <li>Şüuraltı inancın hansı mərhələdə yarandığı aşkarlanır</li>
-          <li>Enerji blokunun mənbə nöqtəsi aydın görünür</li>
-          <li>Konkret "bəli/xeyr", "blok/axın" cavabları gəlir</li>
-          <li>Niyyətə uyğun enerji istiqaməti müəyyən olunur</li>
-        </ul>
-        <p>Seans hər kəs üçün təhlükəsizdir və fərdi enerji tələblərinə uyğun işlənir.</p>
-      </>
-    ),
-  },
-  {
-    photo: heroPhoto,
-    title: 'Qadın Enerjisi Seansı',
-    summary:
-      'Qadının içində gizli qalan ilahi gücü oyatmaq, ruhani enerjisini yüksəltmək və həyatında bolluq, sevgi və harmoniya axınını aktivləşdirmək üçün hazırlanmış xüsusi seans.',
-    meta: [],
-    details: (
-      <>
-        <ul>
-          <li>Müqəddəs qadın yaradılışı ilə bağlantı — daxili gücün oyanması</li>
-          <li>Qadın enerjisinin artımı — zəriflik, cazibə, özünə dəyər, intuisiya</li>
-          <li>Bolluq kanalının açılması — qıtlıq və qorxu kodlarının təmizlənməsi</li>
-          <li>Ailə və sevgi kanalının şəfalandırılması — ana nəsli və keçmiş münasibətlərin təmizlənməsi</li>
-        </ul>
-        <p>
-          Seans sonunda özünə sevgi, özünə dəyər, güvən, sevgi və bolluğu qəbul etmə hissi ilə güclü bir enerji
-          proqramı yaradılır.
-        </p>
-        <p>
-          Kimlər üçündür: qadın enerjisini gücləndirmək, münasibətlərdə təkrar edən döngüləri dəyişmək, bolluq
-          kanalındakı bloku açmaq və özünə sevgini şəfalandırmaq istəyən hər bir qadın üçün.
-        </p>
-      </>
-    ),
-  },
-  {
-    photo: aboutPhoto,
-    title: 'Sound Healing',
-    summary:
-      'Səsin, vibrasiyanın və ruhun dərinliyindəki enerjinin görüşdüyü təcrübə. Tibet kasaları, kristal kasalar və digər vibrasion alətlərlə dərin meditativ vəziyyətə keçid.',
-    meta: ['2 saat', '300 AZN'],
-    details: (
-      <>
-        <p>
-          Bədən yalnız fiziki bir quruluş deyil — yaşadığımız hadisələrin, duyğuların, düşüncələrin və enerjinin
-          izlərini daşıyan bir yaddaş sahəsidir. Sound Healing seansı insanın enerji sahəsi və çakraları ilə işləməyə,
-          daxildə yığılıb qalmış və artıq xidmət etməyən enerjini buraxmağa, ruh və bədən arasında daha dərin bir əlaqə
-          yaratmağa yönəlmiş spiritual praktikadır.
-        </p>
-        <p>Sound Healing sənə nə verə bilər:</p>
-        <ul>
-          <li>Dərin rahatlama və meditativ vəziyyət</li>
-          <li>Enerjinin yenilənməsi və yüngüllük hissi</li>
-          <li>Öz bədənini və duyğularını daha dərindən hiss etmək</li>
-          <li>Daxili sakitlik və zehni susqunluq</li>
-          <li>Emosional boşalma və buraxma təcrübəsi</li>
-          <li>Çakralarla bağlı fərqindəliyin artması</li>
-          <li>Özünlə və daxili dünyanla əlaqənin güclənməsi</li>
-          <li>Ruhani praktikaya daha dərindən bağlanmaq</li>
-          <li>Gündəlik həyatın səs-küyündən uzaqlaşıb özünə qayıtmaq</li>
-        </ul>
-      </>
-    ),
-  },
-  {
-    photo: heroPhoto,
-    title: 'Sadhu Təlimi',
-    summary:
-      'Hind mistikasının sirli yolu — özünə qayıdış təlimi. 4 günlük transformativ proqram sonunda terapist olub seanslar etmək hüququ verən sertifikat təqdim olunur.',
-    meta: ['4 gün', 'Fərdi: 790 AZN', 'Qrup: 490 AZN'],
-    details: (
-      <>
-        <p>Sadhu təlimi sənə nə verir:</p>
-        <ul>
-          <li>Terapist olub seanslar etmə hüququ</li>
-          <li>Zehni sakitlik və diqqət</li>
-          <li>Ruhsal yüksəliş və fərqindəlik</li>
-          <li>Stressdən və mənasız təlaşdan azadlıq</li>
-          <li>Daxili güc və intuisiyanın oyadılması</li>
-          <li>Öz yolunu, məqsədini kəşf etmək</li>
-          <li>Qorxulardan, keçmişdən və yorğunluqdan azad olmaq üçün fürsət</li>
-        </ul>
-        <p>
-          Bu yol nə dini, nə də adi təlimdir — özünə qayıdışdır. Ağlını deyil, ruhunu dinlə. Təlim sonunda sertifikat
-          təqdim olunur.
-        </p>
-        <p>Fərdi təlim 790 AZN, qrup təlimi 490 AZN. 2 hissəli ödəniş mümkündür.</p>
-      </>
-    ),
-  },
-];
-
-const packages = [
-  {
-    title: 'Qadınlıq Enerjisi Paketi',
-    duration: '3 aylıq proqram · 3 seans',
-    price: '450 AZN',
-    sessions: [
-      'Negativ inanc və enerji təmizliyi, qorxuların şəfalanması',
-      'Ana nəsli şəfası, ana bətni şəfası, qadınlığı qəbullanma',
-      'Qadınlıq enerji artımı meditasiyası',
-    ],
-  },
-  {
-    title: 'Daxili Hüzur və Sevgi Dolu Yaşam Paketi',
-    duration: '3 aylıq proqram · 3 seans',
-    price: '500 AZN',
-    sessions: [
-      'ThetaHealing (daxili hüzur, öz dəyər, öz sevgi)',
-      'Kvant terapiya (keçmişi qəbullanma və bağışlayıb azadlaşmaq)',
-      'Mini reqressiya (keçmiş yaşamlardan özüylə barışma, nəsli qəbullanma və azadlaşmaq)',
-    ],
-  },
-  {
-    title: 'Maddi Artım Paketi',
-    duration: '6 aylıq proqram · 6 seans',
-    price: '1160 AZN',
-    sessions: [
-      'ThetaHealing (təmizlənmə və pozitiv inanc yüklənmələri)',
-      'Bolluq-bərəkət (gəlir kanalının genişlənməsi)',
-      'Mini reqressiya',
-      'Kvant terapiya (rituallar)',
-      'Disiplin, aktiv həyat planı qurulması',
-      'Zənginlik meditasiyası (beyin kodlama)',
-    ],
-  },
-  {
-    title: 'Ruh Əşi, Sevgi və Ailə Münasibətləri Paketi',
-    duration: '3 aylıq proqram · 3 seans',
-    price: '500 AZN',
-    sessions: [
-      'Qorxuların təmizlənməsi, keçmiş münasibətlərlə bağ kəsmə, ana bətni şəfası',
-      'Öz dəyər, öz sevgi, öz güvən, ideal formanı yaratma meditasiyası',
-      'Ruh əşi seansı (manifest meditasiya)',
-    ],
-  },
-  {
-    title: 'Negativ Enerji Təmizliyi Paketi',
-    duration: '3 aylıq proqram · 3 seans',
-    price: '450 AZN',
-    sessions: [
-      'Energetik mətizlənmə (cadu, nəzər, nəfs, bədduaların ləğvi)',
-      'Qoruma enerjisinin qoyulması',
-      'Karmik vəziyyətlərin şəfalanması (nəsil şəfası)',
-    ],
-  },
-  {
-    title: 'Arzuları Reallaşdırma Paketi',
-    duration: '6 aylıq proqram · 6 seans',
-    price: '1600 AZN',
-    sessions: [
-      'Dərin ThetaHealing (energetik təmizlənmə, şəfalanma)',
-      'Kvant terapiya (rituallar, daxilindəki uşaq terapiyası)',
-      'Bolluq-bərəkət (gəlirin artırılması)',
-      'Yaradım meditasiyası (manifestasiya)',
-      'Planlama və disiplin cədvəlinin qurulması',
-      'Mini reqressiya (keçmiş yaşamlardan gələn karmaların şəfalanması)',
-    ],
-  },
-  {
-    title: 'Ailə Münasibətləri Paketi',
-    duration: '5 aylıq proqram · 6 seans',
-    price: '900 AZN',
-    sessions: [
-      'Təmizlənmə, arınma, qırılmış ruhun bərpası, çakra şəfası',
-      'Yoldaşla olan travmaların ümumi şəfalanması',
-      'Daxili sistemin bərpa olunması',
-      'Ailə münasibətlərinə açılan ümumi şəfalanma — rituallarla ailə bərəkətinin artımı',
-      'Ana və ana nəsli şəfası',
-      'Manifestasiya, pozitiv enerji və inanc yüklənmələri',
-    ],
-  },
 ];
 
 const certificates = [
@@ -328,15 +53,12 @@ const certificates = [
   },
 ];
 
-const INSTAGRAM_REVIEWS_LINK = 'https://www.instagram.com/stories/highlights/18083118499401201/';
-
 const testimonials = [
   'Seans mənə çətin olsa da, çox şeyi yada salmağı və unutmağı öyrətdi. Hal-hazırda özümü çox yaxşı hiss edirəm, sizinlə bağışlamağı və şəfalanmağı öyrənirəm.',
   'İçimdə olan neqativ hissi atmağı bacardım, yığılıb qalmış duyğuları söküb atdım eləbil. Əvvəl mənfi fikir gələndə başıma ağrılar gəlirdi, indi heç düşünmək belə istəmir beynim.',
   'Seansdan çıxdığımda hiss etdiyim o xoşbəxtlik indi də üzərimdədir. Heç bir fiziki narahatlığım yoxdur artıq, bu sevinclə ətrafımdakı hər kəsi xoşbəxt etməyə çalışıram.',
   '6 il içimdə saxladığım qorxu hissi, uşaqlıqdan gələn günahkarlıq hissi — artıq həmin hisslər yoxdur məndə. Sonsuz təşəkkür edirəm.',
   'Otağın aurası, mühiti o qədər gözəl idi ki, getmək istəmirdim heç. İlk gündən belə təsir gördümsə, sonrakı günlər daha yaxşı olacaq.',
-  'Sizin yanınıza gəlməmişdən bir neçə saat sonra özümdə fərqindəlik hiss etdim, insanlara qırılmamaq üçün "yox" deməyi bacardım və özümü ruhən çox rahatlamış hiss edirəm.',
   'Mənə özümü sevdirdiyiniz üçün çox sağ olun. Seans vaxtı ən çox təsirləndiyim an özümü qucaqlayanda oldu — əsas sevgini özümə göstərməli olduğumu anladım.',
   'Özümü yeni bir insan kimi hiss edirəm. Sizin yanınıza gəlməyimlə həyatımda böyük iz qoyan bir hadisəni tamam fərqli görməyə başladım.',
 ];
@@ -344,52 +66,7 @@ const testimonials = [
 export default function Home() {
   return (
     <>
-      <div className="topbar">
-        <div className="topbar-inner">
-          <div className="topbar-socials">
-            <a href={INSTAGRAM_LINK} target="_blank" rel="noreferrer" aria-label="Instagram">
-              <IconInstagram />
-            </a>
-            <a href={YOUTUBE_LINK} target="_blank" rel="noreferrer" aria-label="YouTube">
-              <IconYoutube />
-            </a>
-            <a href={WHATSAPP_LINK} target="_blank" rel="noreferrer" aria-label="WhatsApp">
-              <IconWhatsapp />
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <nav className="nav">
-        <div className="nav-inner">
-          <a className="nav-logo" href="#top">
-            Aytən Ağayeva
-          </a>
-          <ul className="nav-links">
-            <li>
-              <a href="#about">Haqqımda</a>
-            </li>
-            <li>
-              <a href="#services">Seanslar</a>
-            </li>
-            <li>
-              <a href="#packages">Paket Seanslar</a>
-            </li>
-            <li>
-              <a href="#certificates">Sertifikatlar</a>
-            </li>
-            <li>
-              <a href="#testimonials">Rəylər</a>
-            </li>
-            <li>
-              <a href="#contact">Qeydiyyat</a>
-            </li>
-          </ul>
-          <a className="btn btn-primary" href={WHATSAPP_LINK} target="_blank" rel="noreferrer">
-            WhatsApp ilə yaz
-          </a>
-        </div>
-      </nav>
+      <Header />
 
       <main>
         <section id="top" className="hero">
@@ -403,7 +80,7 @@ export default function Home() {
                 praktikaları və şəxsi inkişaf seansları ilə sizə bu yolda rəhbərlik edirəm.
               </p>
               <div className="btn-row">
-                <a className="btn btn-primary" href="#services">
+                <a className="btn btn-primary" href="/seanslar">
                   Seanslara bax
                 </a>
                 <a className="btn btn-secondary" href={WHATSAPP_LINK} target="_blank" rel="noreferrer">
@@ -433,82 +110,6 @@ export default function Home() {
                   </div>
                   <h3>{title}</h3>
                   <p>{text}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section id="services">
-          <div className="container">
-            <div className="section-head">
-              <p className="eyebrow">Seanslar</p>
-              <h2>Necə Kömək Edə Bilərəm</h2>
-              <p className="lead" style={{ margin: '0 auto' }}>
-                Hər kartın üzərinə klikləyərək ətraflı məlumatı görə bilərsiniz.
-              </p>
-            </div>
-            <div className="services-grid">
-              {services.map((service) => (
-                <details className="service-card" key={service.title}>
-                  <summary>
-                    <div className="service-media">
-                      <Image src={service.photo} alt={service.title} placeholder="blur" />
-                    </div>
-                    <div className="service-body">
-                      <div className="service-body-head">
-                        <h3>{service.title}</h3>
-                        <svg className="chevron" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                          <path d="M6 9l6 6 6-6" />
-                        </svg>
-                      </div>
-                      <p className="service-summary">{service.summary}</p>
-                      {service.meta.length > 0 && (
-                        <div className="service-meta">
-                          {service.meta.map((m) => (
-                            <span key={m}>{m}</span>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  </summary>
-                  <div className="service-details">
-                    {service.details}
-                    <a className="service-cta" href={WHATSAPP_LINK} target="_blank" rel="noreferrer">
-                      Qeydiyyat üçün WhatsApp-da yazın →
-                    </a>
-                  </div>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section id="packages">
-          <div className="container">
-            <div className="section-head">
-              <p className="eyebrow">Paket Seanslar</p>
-              <h2>Çox Aylıq Proqramlar</h2>
-              <p className="lead" style={{ margin: '0 auto' }}>
-                Bir mövzu üzərində daha dərin işləmək istəyənlər üçün seanslardan ibarət paketlər.
-              </p>
-            </div>
-            <div className="packages-grid">
-              {packages.map((pkg) => (
-                <div className="package-card" key={pkg.title}>
-                  <div className="package-head">
-                    <h3>{pkg.title}</h3>
-                    <span className="package-price">{pkg.price}</span>
-                  </div>
-                  <p className="package-duration">{pkg.duration}</p>
-                  <ul>
-                    {pkg.sessions.map((s) => (
-                      <li key={s}>{s}</li>
-                    ))}
-                  </ul>
-                  <a className="service-cta" href={WHATSAPP_LINK} target="_blank" rel="noreferrer">
-                    Qeydiyyat üçün WhatsApp-da yazın →
-                  </a>
                 </div>
               ))}
             </div>
@@ -553,8 +154,8 @@ export default function Home() {
                 <span>Seans növü</span>
               </div>
               <div className="stat">
-                <strong>3</strong>
-                <span>Dil (Az, Tr, Ru)</span>
+                <strong>1</strong>
+                <span>Dil (Az)</span>
               </div>
             </div>
           </div>
@@ -631,7 +232,7 @@ export default function Home() {
               </div>
               <h2>Qeydiyyat</h2>
               <p>
-                Sadəcə online və canlı studioda seanslar keçirilir. Qeydiyyat üçün öncədən yazılmaq mütləqdir.
+                Seanslar online və ya canlı studioda keçirilir. Qeydiyyat üçün öncədən yazılmaq mütləqdir.
                 Qiymətlə bağlı məlumat WhatsApp-da veriləcək.
               </p>
               <a className="btn btn-primary" href={WHATSAPP_LINK} target="_blank" rel="noreferrer">
@@ -642,60 +243,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer>
-        <div className="container">
-          <div className="footer-grid">
-            <div>
-              <div className="footer-logo">Aytən Ağayeva</div>
-              <p>Şüuraltı seanslar, enerji praktikaları, meditasiya və şəxsi transformasiya.</p>
-              <div className="footer-socials">
-                <a href={INSTAGRAM_LINK} target="_blank" rel="noreferrer" aria-label="Instagram">
-                  <IconInstagram />
-                </a>
-                <a href={YOUTUBE_LINK} target="_blank" rel="noreferrer" aria-label="YouTube">
-                  <IconYoutube />
-                </a>
-                <a href={WHATSAPP_LINK} target="_blank" rel="noreferrer" aria-label="WhatsApp">
-                  <IconWhatsapp />
-                </a>
-              </div>
-            </div>
-            <div className="footer-col">
-              <h4>Keçidlər</h4>
-              <ul>
-                <li>
-                  <a href="#about">Haqqımda</a>
-                </li>
-                <li>
-                  <a href="#services">Seanslar</a>
-                </li>
-                <li>
-                  <a href="#packages">Paket Seanslar</a>
-                </li>
-                <li>
-                  <a href="#certificates">Sertifikatlar</a>
-                </li>
-                <li>
-                  <a href="#testimonials">Rəylər</a>
-                </li>
-              </ul>
-            </div>
-            <div className="footer-col">
-              <h4>Seanslar</h4>
-              <ul>
-                {services.slice(0, 4).map((s) => (
-                  <li key={s.title}>
-                    <a href="#services">{s.title}</a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-          <div className="footer-bottom">
-            <span>© {new Date().getFullYear()} Aytən Ağayeva. Bütün hüquqlar qorunur.</span>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </>
   );
 }
