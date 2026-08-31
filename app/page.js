@@ -72,7 +72,7 @@ export default function Home() {
         <section id="top" className="hero">
           <div className="container hero-grid">
             <div>
-              <p className="eyebrow">Ruhsal Yolculuğa Xoş Gəldin ✨</p>
+              <p className="eyebrow">Ruhsal Yolculuğa Xoş Gəldin</p>
               <h1>Aytən Ağayeva</h1>
               <p className="lead">
                 Son illər ruhsal sağlamlığın önəmini bütün dünya anlayır. Elm qəbul etməyə başlayır ki, bütün

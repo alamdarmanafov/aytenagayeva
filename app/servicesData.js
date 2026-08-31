@@ -168,33 +168,34 @@ const services = [
       </>
     ),
   },
-  {
-    photo: sadhuThetaPhoto,
-    title: 'Sadhu Təlimi',
-    summary:
-      'Hind mistikasının sirli yolu — özünə qayıdış təlimi. 4 günlük transformativ proqram sonunda terapist olub seanslar etmək hüququ verən sertifikat təqdim olunur.',
-    meta: ['4 gün', 'Fərdi: 790 AZN', 'Qrup: 490 AZN'],
-    details: (
-      <>
-        <p>Sadhu təlimi sənə nə verir:</p>
-        <ul>
-          <li>Terapist olub seanslar etmə hüququ</li>
-          <li>Zehni sakitlik və diqqət</li>
-          <li>Ruhsal yüksəliş və fərqindəlik</li>
-          <li>Stressdən və mənasız təlaşdan azadlıq</li>
-          <li>Daxili güc və intuisiyanın oyadılması</li>
-          <li>Öz yolunu, məqsədini kəşf etmək</li>
-          <li>Qorxulardan, keçmişdən və yorğunluqdan azad olmaq üçün fürsət</li>
-        </ul>
-        <p>
-          Bu yol nə dini, nə də adi təlimdir — özünə qayıdışdır. Ağlını deyil, ruhunu dinlə. Təlim sonunda sertifikat
-          təqdim olunur.
-        </p>
-        <p>Fərdi təlim 790 AZN, qrup təlimi 490 AZN. 2 hissəli ödəniş mümkündür.</p>
-      </>
-    ),
-  },
 ];
+
+const training = {
+  photo: sadhuThetaPhoto,
+  title: 'Sadhu Təlimi',
+  summary:
+    'Hind mistikasının sirli yolu — özünə qayıdış təlimi. 4 günlük transformativ proqram sonunda terapist olub seanslar etmək hüququ verən sertifikat təqdim olunur.',
+  meta: ['4 gün', 'Fərdi: 790 AZN', 'Qrup: 490 AZN'],
+  details: (
+    <>
+      <p>Sadhu təlimi sənə nə verir:</p>
+      <ul>
+        <li>Terapist olub seanslar etmə hüququ</li>
+        <li>Zehni sakitlik və diqqət</li>
+        <li>Ruhsal yüksəliş və fərqindəlik</li>
+        <li>Stressdən və mənasız təlaşdan azadlıq</li>
+        <li>Daxili güc və intuisiyanın oyadılması</li>
+        <li>Öz yolunu, məqsədini kəşf etmək</li>
+        <li>Qorxulardan, keçmişdən və yorğunluqdan azad olmaq üçün fürsət</li>
+      </ul>
+      <p>
+        Bu yol nə dini, nə də adi təlimdir — özünə qayıdışdır. Ağlını deyil, ruhunu dinlə. Təlim sonunda sertifikat
+        təqdim olunur.
+      </p>
+      <p>Fərdi təlim 790 AZN, qrup təlimi 490 AZN. 2 hissəli ödəniş mümkündür.</p>
+    </>
+  ),
+};
 
 const packages = [
   {
@@ -286,4 +287,4 @@ const packages = [
 ];
 
 
-export { services, packages };
+export { services, packages, training };

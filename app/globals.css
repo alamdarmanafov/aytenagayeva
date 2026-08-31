@@ -848,6 +848,11 @@ footer {
 
   .nav-burger {
     display: flex;
+    order: 2;
+  }
+
+  .nav-inner .btn {
+    order: 1;
   }
 
   .nav-links {

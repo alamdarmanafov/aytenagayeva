@@ -42,6 +42,9 @@ export default function Header() {
               <a href="/paketler">Paket Seanslar</a>
             </li>
             <li>
+              <a href="/telim">Təlim</a>
+            </li>
+            <li>
               <a href="/#certificates">Sertifikatlar</a>
             </li>
             <li>
