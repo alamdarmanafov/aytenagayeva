@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { WHATSAPP_LINK } from '../constants';
@@ -26,6 +27,11 @@ export default function Paketler() {
             <div className="packages-grid">
               {packages.map((pkg) => (
                 <div className="package-card" key={pkg.title}>
+                  {pkg.photo && (
+                    <div className="package-media">
+                      <Image src={pkg.photo} alt={pkg.title} placeholder="blur" />
+                    </div>
+                  )}
                   <div className="package-head">
                     <h3>{pkg.title}</h3>
                     <span className="package-price">{pkg.price}</span>

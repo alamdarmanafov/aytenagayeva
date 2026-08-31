@@ -328,16 +328,15 @@ h2 {
 }
 
 .service-media {
-  aspect-ratio: 2.8 / 1;
   overflow: hidden;
   background: var(--bg-alt);
+  line-height: 0;
 }
 
 .service-media img {
   width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center;
+  height: auto;
+  display: block;
 }
 
 .service-card summary {
@@ -514,6 +513,20 @@ h2 {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 1.75rem;
+  overflow: hidden;
+}
+
+.package-media {
+  margin: -1.75rem -1.75rem 1.25rem;
+  overflow: hidden;
+  background: var(--bg-alt);
+  line-height: 0;
+}
+
+.package-media img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .package-head {

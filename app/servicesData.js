@@ -191,6 +191,7 @@ const services = [
 
 const packages = [
   {
+    photo: qadinEnerjisiPhoto,
     title: 'Qadınlıq Enerjisi Paketi',
     duration: '3 aylıq proqram · 3 seans',
     price: '450 AZN',
@@ -201,6 +202,7 @@ const packages = [
     ],
   },
   {
+    photo: thetaHealingPhoto,
     title: 'Daxili Hüzur və Sevgi Dolu Yaşam Paketi',
     duration: '3 aylıq proqram · 3 seans',
     price: '500 AZN',
@@ -211,6 +213,7 @@ const packages = [
     ],
   },
   {
+    photo: bolluqBereketPhoto,
     title: 'Maddi Artım Paketi',
     duration: '6 aylıq proqram · 6 seans',
     price: '1160 AZN',
@@ -244,6 +247,7 @@ const packages = [
     ],
   },
   {
+    photo: bolluqBereketPhoto,
     title: 'Arzuları Reallaşdırma Paketi',
     duration: '6 aylıq proqram · 6 seans',
     price: '1600 AZN',
