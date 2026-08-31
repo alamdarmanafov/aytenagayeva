@@ -7,6 +7,8 @@ export const metadata = {
   description: 'Ödənişli və ödənişsiz meditasiya seansları. Pulsuz meditasiyalar YouTube kanalında.',
 };
 
+const videoIds = ['7C65kCZYCgw', 'K2WaT4DoFi0', 'VA_MWMDjrAM', '2lXMlGIYQxA', 'QMqW7OeQHj4'];
+
 export default function Meditasiya() {
   return (
     <>
@@ -36,14 +38,35 @@ export default function Meditasiya() {
 
         <section>
           <div className="container">
-            <div className="cta">
-              <h2>Pulsuz Meditasiyalar — YouTube</h2>
-              <p>
-                Ruh Saloyanı YouTube kanalında müntəzəm olaraq pulsuz meditasiya videoları paylaşılır. Kanala
-                abunə olun ki, yeni videolardan xəbərdar olasınız.
-              </p>
+            <div className="section-head">
+              <p className="eyebrow">YouTube</p>
+              <h2>Pulsuz Meditasiya Videoları</h2>
+            </div>
+            <div className="videos-slider">
+              <div className="videos-track">
+                {[...videoIds, ...videoIds].map((id, i) => (
+                  <a
+                    className="video-card"
+                    key={i}
+                    href={`https://www.youtube.com/watch?v=${id}`}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img src={`https://img.youtube.com/vi/${id}/hqdefault.jpg`} alt="Meditasiya videosu" loading="lazy" />
+                    <span className="play-icon">
+                      <span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M8 5v14l11-7z" />
+                        </svg>
+                      </span>
+                    </span>
+                  </a>
+                ))}
+              </div>
+            </div>
+            <div className="testimonials-more">
               <a className="btn btn-primary" href={YOUTUBE_LINK} target="_blank" rel="noreferrer">
-                YouTube kanalına keç
+                Daha çox video — YouTube
               </a>
             </div>
           </div>
