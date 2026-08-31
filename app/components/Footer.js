@@ -61,6 +61,7 @@ export default function Footer() {
         </div>
         <div className="footer-bottom">
           <span>© {new Date().getFullYear()} Aytən Ağayeva. Bütün hüquqlar qorunur.</span>
+          <a href="/mexfilik">Məxfilik və Vacib Məlumat</a>
         </div>
       </div>
     </footer>
