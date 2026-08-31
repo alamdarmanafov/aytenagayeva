@@ -45,6 +45,9 @@ export default function Header() {
               <a href="/telim">Təlim</a>
             </li>
             <li>
+              <a href="/meditasiya">Meditasiya</a>
+            </li>
+            <li>
               <a href="/#certificates">Sertifikatlar</a>
             </li>
             <li>
