@@ -1,10 +1,14 @@
-import heroPhoto from '../public/images/photos/portrait-studio.jpg';
-import aboutPhoto from '../public/images/photos/session-in-progress.jpg';
-import headshotPhoto from '../public/images/photos/headshot.jpg';
+import thetaHealingPhoto from '../public/images/services/theta-healing.jpg';
+import soundHealingPhoto from '../public/images/services/sound-healing.jpg';
+import bolluqBereketPhoto from '../public/images/services/bolluq-bereket.jpg';
+import qadinEnerjisiPhoto from '../public/images/services/qadin-enerjisi.jpg';
+import jaasPhoto from '../public/images/services/jaas.jpg';
+import lifeCoachPhoto from '../public/images/services/life-coach.jpg';
+import sadhuThetaPhoto from '../public/images/services/sadhu-theta.jpg';
 
 const services = [
   {
-    photo: aboutPhoto,
+    photo: thetaHealingPhoto,
     title: 'ThetaHealing — Şüuraltı Seans',
     summary:
       'Problemlərin şüuraltı səbəblərini müəyyən edib dərhal şəfalandırmağa imkan yaradan effektiv texnika. Beynimizdəki mənfi inancları, enerji tıxanıqlarını və travmaları aradan qaldırır.',
@@ -37,7 +41,7 @@ const services = [
     ),
   },
   {
-    photo: heroPhoto,
+    photo: lifeCoachPhoto,
     title: 'Life Coach Seansı',
     summary:
       'Potensialınızı maksimuma çıxarmaq, güclü tərəflərinizi üzə çıxarmaq, özünə inamı və disiplini artırmaq üçün fərdi koçluq seansı.',
@@ -63,7 +67,7 @@ const services = [
     ),
   },
   {
-    photo: headshotPhoto,
+    photo: bolluqBereketPhoto,
     title: 'Bolluq-Bərəkət Seansı',
     summary:
       'Maddi axının qarşısındakı görünməyən blokları təmizləyən, bolluq şüurunu aktivləşdirən və daxili dəyər hissini yüksəldən xüsusi seans.',
@@ -84,7 +88,7 @@ const services = [
     ),
   },
   {
-    photo: aboutPhoto,
+    photo: jaasPhoto,
     title: 'JAAS Seansı',
     summary:
       "Jean Adrienne's Clearing System — enerji protokolları və şüuraltı sorğu sistemləri ilə işləyən, strukturlaşdırılmış və dəqiq nəticəli bir metod.",
@@ -104,7 +108,7 @@ const services = [
     ),
   },
   {
-    photo: heroPhoto,
+    photo: qadinEnerjisiPhoto,
     title: 'Qadın Enerjisi Seansı',
     summary:
       'Qadının içində gizli qalan ilahi gücü oyatmaq, ruhani enerjisini yüksəltmək və həyatında bolluq, sevgi və harmoniya axınını aktivləşdirmək üçün hazırlanmış xüsusi seans.',
@@ -129,7 +133,7 @@ const services = [
     ),
   },
   {
-    photo: aboutPhoto,
+    photo: soundHealingPhoto,
     title: 'Sound Healing',
     summary:
       'Səsin, vibrasiyanın və ruhun dərinliyindəki enerjinin görüşdüyü təcrübə. Tibet kasaları, kristal kasalar və digər vibrasion alətlərlə dərin meditativ vəziyyətə keçid.',
@@ -158,7 +162,7 @@ const services = [
     ),
   },
   {
-    photo: heroPhoto,
+    photo: sadhuThetaPhoto,
     title: 'Sadhu Təlimi',
     summary:
       'Hind mistikasının sirli yolu — özünə qayıdış təlimi. 4 günlük transformativ proqram sonunda terapist olub seanslar etmək hüququ verən sertifikat təqdim olunur.',
