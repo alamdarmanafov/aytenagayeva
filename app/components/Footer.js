@@ -46,6 +46,9 @@ export default function Footer() {
               <li>
                 <a href="/#testimonials">Rəylər</a>
               </li>
+              <li>
+                <a href="/mexfilik">Məxfilik</a>
+              </li>
             </ul>
           </div>
           <div className="footer-col">
@@ -61,7 +64,6 @@ export default function Footer() {
         </div>
         <div className="footer-bottom">
           <span>© {new Date().getFullYear()} Aytən Ağayeva. Bütün hüquqlar qorunur.</span>
-          <a href="/mexfilik">Məxfilik və Vacib Məlumat</a>
         </div>
       </div>
     </footer>

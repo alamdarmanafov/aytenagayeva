@@ -53,6 +53,9 @@ export default function Header() {
             <li>
               <a href="/#testimonials">Rəylər</a>
             </li>
+            <li>
+              <a href="/mexfilik">Məxfilik</a>
+            </li>
           </ul>
           <a className="btn btn-primary" href={WHATSAPP_LINK} target="_blank" rel="noreferrer">
             WhatsApp ilə yaz
