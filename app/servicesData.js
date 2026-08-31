@@ -5,6 +5,9 @@ import qadinEnerjisiPhoto from '../public/images/services/qadin-enerjisi.jpg';
 import jaasPhoto from '../public/images/services/jaas.jpg';
 import lifeCoachPhoto from '../public/images/services/life-coach.jpg';
 import sadhuThetaPhoto from '../public/images/services/sadhu-theta.jpg';
+import negativEnerjiPhoto from '../public/images/services/negativ-enerji-temizliyi.jpg';
+import ruhEsiSevgiAilePhoto from '../public/images/services/ruh-esi-sevgi-aile.jpg';
+import aileMunasibetleriPhoto from '../public/images/services/aile-munasibetleri.jpg';
 
 const services = [
   {
@@ -227,6 +230,7 @@ const packages = [
     ],
   },
   {
+    photo: ruhEsiSevgiAilePhoto,
     title: 'Ruh Əşi, Sevgi və Ailə Münasibətləri Paketi',
     duration: '3 aylıq proqram · 3 seans',
     price: '500 AZN',
@@ -237,6 +241,7 @@ const packages = [
     ],
   },
   {
+    photo: negativEnerjiPhoto,
     title: 'Negativ Enerji Təmizliyi Paketi',
     duration: '3 aylıq proqram · 3 seans',
     price: '450 AZN',
@@ -261,6 +266,7 @@ const packages = [
     ],
   },
   {
+    photo: aileMunasibetleriPhoto,
     title: 'Ailə Münasibətləri Paketi',
     duration: '5 aylıq proqram · 6 seans',
     price: '900 AZN',
