@@ -8,6 +8,10 @@ import sadhuThetaPhoto from '../public/images/services/sadhu-theta.jpg';
 import negativEnerjiPhoto from '../public/images/services/negativ-enerji-temizliyi.jpg';
 import ruhEsiSevgiAilePhoto from '../public/images/services/ruh-esi-sevgi-aile.jpg';
 import aileMunasibetleriPhoto from '../public/images/services/aile-munasibetleri.jpg';
+import maddiArtimPhoto from '../public/images/services/maddi-artim.jpg';
+import daxiliHuzurSevgiPhoto from '../public/images/services/daxili-huzur-sevgi.jpg';
+import qadinliqEnerjisiPhoto from '../public/images/services/qadinliq-enerjisi.jpg';
+import arzulariReallasdirmaPhoto from '../public/images/services/arzulari-reallasdirma.jpg';
 
 const services = [
   {
@@ -194,7 +198,7 @@ const services = [
 
 const packages = [
   {
-    photo: qadinEnerjisiPhoto,
+    photo: qadinliqEnerjisiPhoto,
     title: 'Qadınlıq Enerjisi Paketi',
     duration: '3 aylıq proqram · 3 seans',
     price: '450 AZN',
@@ -205,7 +209,7 @@ const packages = [
     ],
   },
   {
-    photo: thetaHealingPhoto,
+    photo: daxiliHuzurSevgiPhoto,
     title: 'Daxili Hüzur və Sevgi Dolu Yaşam Paketi',
     duration: '3 aylıq proqram · 3 seans',
     price: '500 AZN',
@@ -216,7 +220,7 @@ const packages = [
     ],
   },
   {
-    photo: bolluqBereketPhoto,
+    photo: maddiArtimPhoto,
     title: 'Maddi Artım Paketi',
     duration: '6 aylıq proqram · 6 seans',
     price: '1160 AZN',
@@ -252,7 +256,7 @@ const packages = [
     ],
   },
   {
-    photo: bolluqBereketPhoto,
+    photo: arzulariReallasdirmaPhoto,
     title: 'Arzuları Reallaşdırma Paketi',
     duration: '6 aylıq proqram · 6 seans',
     price: '1600 AZN',
