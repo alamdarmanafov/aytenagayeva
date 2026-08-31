@@ -155,6 +155,12 @@ svg {
 }
 
 /* Buttons */
+.btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
