@@ -30,10 +30,10 @@ export default function Header() {
               <a href="/#about">Haqqımda</a>
             </li>
             <li>
-              <a href="/seanslar#services">Seanslar</a>
+              <a href="/seanslar">Seanslar</a>
             </li>
             <li>
-              <a href="/seanslar#packages">Paket Seanslar</a>
+              <a href="/paketler">Paket Seanslar</a>
             </li>
             <li>
               <a href="/#certificates">Sertifikatlar</a>

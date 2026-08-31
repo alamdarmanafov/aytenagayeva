@@ -217,7 +217,7 @@ export default function Home() {
               </div>
             </div>
             <div className="testimonials-more">
-              <a className="btn btn-secondary" href={INSTAGRAM_REVIEWS_LINK} target="_blank" rel="noreferrer">
+              <a className="btn btn-primary" href={INSTAGRAM_REVIEWS_LINK} target="_blank" rel="noreferrer">
                 Daha çox rəy — Instagram
               </a>
             </div>

@@ -2,12 +2,12 @@ import Image from 'next/image';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { WHATSAPP_LINK } from '../constants';
-import { services, packages } from '../servicesData';
+import { services } from '../servicesData';
 
 export const metadata = {
-  title: 'Seanslar və Paketlər — Aytən Ağayeva',
+  title: 'Seanslar — Aytən Ağayeva',
   description:
-    'ThetaHealing, Life Coach, Bolluq-Bərəkət, JAAS, Qadın Enerjisi, Sound Healing seansları və çox aylıq paket proqramları.',
+    'ThetaHealing, Life Coach, Bolluq-Bərəkət, JAAS, Qadın Enerjisi, Sound Healing seansları.',
 };
 
 export default function Seanslar() {
@@ -56,37 +56,6 @@ export default function Seanslar() {
                     </a>
                   </div>
                 </details>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section id="packages">
-          <div className="container">
-            <div className="section-head">
-              <p className="eyebrow">Paket Seanslar</p>
-              <h2>Çox Aylıq Proqramlar</h2>
-              <p className="lead" style={{ margin: '0 auto' }}>
-                Bir mövzu üzərində daha dərin işləmək istəyənlər üçün seanslardan ibarət paketlər.
-              </p>
-            </div>
-            <div className="packages-grid">
-              {packages.map((pkg) => (
-                <div className="package-card" key={pkg.title}>
-                  <div className="package-head">
-                    <h3>{pkg.title}</h3>
-                    <span className="package-price">{pkg.price}</span>
-                  </div>
-                  <p className="package-duration">{pkg.duration}</p>
-                  <ul>
-                    {pkg.sessions.map((s) => (
-                      <li key={s}>{s}</li>
-                    ))}
-                  </ul>
-                  <a className="service-cta" href={WHATSAPP_LINK} target="_blank" rel="noreferrer">
-                    Qeydiyyat üçün WhatsApp-da yazın →
-                  </a>
-                </div>
               ))}
             </div>
           </div>

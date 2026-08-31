@@ -29,10 +29,10 @@ export default function Footer() {
                 <a href="/#about">Haqqımda</a>
               </li>
               <li>
-                <a href="/seanslar#services">Seanslar</a>
+                <a href="/seanslar">Seanslar</a>
               </li>
               <li>
-                <a href="/seanslar#packages">Paket Seanslar</a>
+                <a href="/paketler">Paket Seanslar</a>
               </li>
               <li>
                 <a href="/#certificates">Sertifikatlar</a>
@@ -47,7 +47,7 @@ export default function Footer() {
             <ul>
               {services.slice(0, 4).map((s) => (
                 <li key={s.title}>
-                  <a href="/seanslar#services">{s.title}</a>
+                  <a href="/seanslar">{s.title}</a>
                 </li>
               ))}
             </ul>
