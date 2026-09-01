@@ -114,15 +114,8 @@ export default function Meditasiya() {
           </div>
         </section>
 
-        <section id="panel-paid" className="tab-panel">
+        <section id="panel-paid" className="tab-panel" style={{ paddingTop: 0 }}>
           <div className="container">
-            <div className="section-head">
-              <p className="eyebrow">Ödənişli</p>
-              <h2>Hazır Meditasiyalar</h2>
-              <p className="lead" style={{ margin: '0 auto' }}>
-                Hər kartın üzərinə klikləyərək ətraflı məlumatı görə bilərsiniz.
-              </p>
-            </div>
             <div className="services-grid">
               {paidMeditations.map((item) => (
                 <details className="service-card" key={item.title}>
@@ -158,7 +151,6 @@ export default function Meditasiya() {
         <section id="panel-free" className="tab-panel">
           <div className="container">
             <div className="section-head">
-              <p className="eyebrow">YouTube</p>
               <h2>Meditasiya Videoları</h2>
             </div>
             <div className="videos-slider">
