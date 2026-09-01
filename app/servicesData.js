@@ -51,6 +51,7 @@ const services = [
   {
     photo: lifeCoachPhoto,
     title: 'Life Coach Seansı',
+    price: '100 AZN',
     summary:
       'Potensialınızı maksimuma çıxarmaq, güclü tərəflərinizi üzə çıxarmaq, özünə inamı və disiplini artırmaq üçün fərdi koçluq seansı.',
     meta: ['50 dəqiqə'],
@@ -99,6 +100,7 @@ const services = [
   {
     photo: jaasPhoto,
     title: 'JAAS Seansı',
+    price: '100 AZN',
     summary:
       "Jean Adrienne's Clearing System — enerji protokolları və şüuraltı sorğu sistemləri ilə işləyən, strukturlaşdırılmış və dəqiq nəticəli bir metod.",
     meta: ['16 yaş və yuxarı', '40-60 dəqiqə'],
