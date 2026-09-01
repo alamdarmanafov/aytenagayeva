@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { WHATSAPP_LINK } from '../constants';
-import { services, prices } from '../servicesData';
+import { services } from '../servicesData';
 
 export const metadata = {
   title: 'Seanslar — Aytən Ağayeva',
@@ -56,21 +56,6 @@ export default function Seanslar() {
                     </a>
                   </div>
                 </details>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section id="qiymetler">
-          <div className="container">
-            <div className="price-grid">
-              {prices.map((p) => (
-                <div className="package-card price-card" key={p.title}>
-                  <div className="package-head">
-                    <h3>{p.title}</h3>
-                    <span className="package-price">{p.price}</span>
-                  </div>
-                </div>
               ))}
             </div>
           </div>
