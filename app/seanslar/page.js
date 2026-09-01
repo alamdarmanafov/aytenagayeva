@@ -63,11 +63,7 @@ export default function Seanslar() {
 
         <section id="qiymetler">
           <div className="container">
-            <div className="section-head">
-              <p className="eyebrow">Qiymətlər</p>
-              <h2>Fərdi Seans Qiymətləri</h2>
-            </div>
-            <div className="packages-grid">
+            <div className="price-grid">
               {prices.map((p) => (
                 <div className="package-card price-card" key={p.title}>
                   <div className="package-head">
