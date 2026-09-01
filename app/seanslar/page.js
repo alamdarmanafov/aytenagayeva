@@ -67,11 +67,13 @@ export default function Seanslar() {
               <p className="eyebrow">Qiymətlər</p>
               <h2>Fərdi Seans Qiymətləri</h2>
             </div>
-            <div className="price-list">
+            <div className="packages-grid">
               {prices.map((p) => (
-                <div className="price-row" key={p.title}>
-                  <span>{p.title}</span>
-                  <span className="price-value">{p.price}</span>
+                <div className="package-card price-card" key={p.title}>
+                  <div className="package-head">
+                    <h3>{p.title}</h3>
+                    <span className="package-price">{p.price}</span>
+                  </div>
                 </div>
               ))}
             </div>
