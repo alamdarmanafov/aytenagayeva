@@ -233,7 +233,6 @@ export default function Home() {
               <h2>Qeydiyyat</h2>
               <p>
                 Seanslar online və ya canlı studioda keçirilir. Qeydiyyat üçün öncədən yazılmaq mütləqdir.
-                Qiymətlə bağlı məlumat WhatsApp-da veriləcək.
               </p>
               <a className="btn btn-primary" href={WHATSAPP_LINK} target="_blank" rel="noreferrer">
                 WhatsApp ilə yaz
