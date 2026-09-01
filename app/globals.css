@@ -1043,3 +1043,29 @@ footer {
   margin: 0 0 1rem;
   line-height: 1.7;
 }
+
+.price-list {
+  max-width: 620px;
+  margin: 0 auto;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.price-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.1rem 1.75rem;
+  border-bottom: 1px solid var(--border);
+  font-weight: 600;
+}
+
+.price-row:last-child {
+  border-bottom: none;
+}
+
+.price-value {
+  color: var(--accent-dark);
+}

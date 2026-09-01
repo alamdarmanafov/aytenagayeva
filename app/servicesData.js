@@ -287,4 +287,13 @@ const packages = [
 ];
 
 
-export { services, packages, training };
+const prices = [
+  { title: 'Theta Healing', price: '150 AZN' },
+  { title: 'Sadhu+Theta', price: '200 AZN' },
+  { title: 'Qadın Enerjisi', price: '300 AZN' },
+  { title: 'Bolluq-Bərəkət Seansı', price: '300 AZN' },
+  { title: 'Sadhu Lövhəsi', price: '200 AZN' },
+  { title: 'Sadhu Təlimi', price: '790 AZN' },
+];
+
+export { services, packages, training, prices };
