@@ -17,6 +17,7 @@ const services = [
   {
     photo: thetaHealingPhoto,
     title: 'ThetaHealing — Şüuraltı Seans',
+    price: '150 AZN',
     summary:
       'Problemlərin şüuraltı səbəblərini müəyyən edib dərhal şəfalandırmağa imkan yaradan effektiv texnika. Beynimizdəki mənfi inancları, enerji tıxanıqlarını və travmaları aradan qaldırır.',
     meta: ['16 yaş və yuxarı', '1 saat', 'Ayda 1 dəfə'],
@@ -76,6 +77,7 @@ const services = [
   {
     photo: bolluqBereketPhoto,
     title: 'Bolluq-Bərəkət Seansı',
+    price: '300 AZN',
     summary:
       'Maddi axının qarşısındakı görünməyən blokları təmizləyən, bolluq şüurunu aktivləşdirən və daxili dəyər hissini yüksəldən xüsusi seans.',
     meta: [],
@@ -117,6 +119,7 @@ const services = [
   {
     photo: qadinEnerjisiPhoto,
     title: 'Qadın Enerjisi Seansı',
+    price: '300 AZN',
     summary:
       'Qadının içində gizli qalan ilahi gücü oyatmaq, ruhani enerjisini yüksəltmək və həyatında bolluq, sevgi və harmoniya axınını aktivləşdirmək üçün hazırlanmış xüsusi seans.',
     meta: [],
@@ -142,9 +145,10 @@ const services = [
   {
     photo: soundHealingPhoto,
     title: 'Sound Healing',
+    price: '300 AZN',
     summary:
       'Səsin, vibrasiyanın və ruhun dərinliyindəki enerjinin görüşdüyü təcrübə. Tibet kasaları, kristal kasalar və digər vibrasion alətlərlə dərin meditativ vəziyyətə keçid.',
-    meta: ['2 saat', '300 AZN'],
+    meta: ['2 saat'],
     details: (
       <>
         <p>

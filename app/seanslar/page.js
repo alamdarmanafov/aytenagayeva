@@ -35,9 +35,12 @@ export default function Seanslar() {
                     <div className="service-body">
                       <div className="service-body-head">
                         <h3>{service.title}</h3>
-                        <svg className="chevron" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                          <path d="M6 9l6 6 6-6" />
-                        </svg>
+                        <div className="service-head-right">
+                          {service.price && <span className="package-price">{service.price}</span>}
+                          <svg className="chevron" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                            <path d="M6 9l6 6 6-6" />
+                          </svg>
+                        </div>
                       </div>
                       <p className="service-summary">{service.summary}</p>
                       {service.meta.length > 0 && (
