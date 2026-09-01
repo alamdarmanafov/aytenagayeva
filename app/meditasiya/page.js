@@ -91,28 +91,30 @@ export default function Meditasiya() {
       <Header />
 
       <main>
+        <input type="radio" name="meditasiya-tab" id="tab-paid" className="tab-radio" defaultChecked />
+        <input type="radio" name="meditasiya-tab" id="tab-free" className="tab-radio" />
+
         <section style={{ paddingTop: '3rem' }}>
           <div className="container">
             <div className="section-head">
               <p className="eyebrow">Meditasiya</p>
               <h2>Ödənişli və Ödənişsiz Meditasiyalar</h2>
               <p className="lead" style={{ margin: '0 auto' }}>
-                Fərdi ödənişli meditasiya seansı üçün WhatsApp-da yazın, ya da pulsuz meditasiyaları YouTube
-                kanalımızda izləyin.
+                Aşağıdan seçim edərək hazır meditasiyalara və ya YouTube videolarına baxa bilərsiniz.
               </p>
             </div>
             <div className="btn-row" style={{ justifyContent: 'center' }}>
-              <a className="btn btn-primary" href={WHATSAPP_LINK} target="_blank" rel="noreferrer">
+              <label htmlFor="tab-paid" className="btn btn-primary tab-label">
                 Ödənişli Meditasiya
-              </a>
-              <a className="btn btn-secondary" href={YOUTUBE_LINK} target="_blank" rel="noreferrer">
+              </label>
+              <label htmlFor="tab-free" className="btn btn-secondary tab-label">
                 Ödənişsiz Meditasiya
-              </a>
+              </label>
             </div>
           </div>
         </section>
 
-        <section>
+        <section id="panel-paid" className="tab-panel">
           <div className="container">
             <div className="section-head">
               <p className="eyebrow">Ödənişli</p>
@@ -153,7 +155,7 @@ export default function Meditasiya() {
           </div>
         </section>
 
-        <section>
+        <section id="panel-free" className="tab-panel">
           <div className="container">
             <div className="section-head">
               <p className="eyebrow">YouTube</p>

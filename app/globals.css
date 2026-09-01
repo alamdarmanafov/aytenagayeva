@@ -1069,3 +1069,20 @@ footer {
 .price-value {
   color: var(--accent-dark);
 }
+
+.tab-radio {
+  display: none;
+}
+
+.tab-label {
+  cursor: pointer;
+}
+
+.tab-panel {
+  display: none;
+}
+
+#tab-paid:checked ~ #panel-paid,
+#tab-free:checked ~ #panel-free {
+  display: block;
+}
