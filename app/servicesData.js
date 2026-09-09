@@ -5,6 +5,7 @@ import qadinEnerjisiPhoto from '../public/images/services/qadin-enerjisi.jpg';
 import jaasPhoto from '../public/images/services/jaas.jpg';
 import lifeCoachPhoto from '../public/images/services/life-coach.jpg';
 import sadhuThetaPhoto from '../public/images/services/sadhu-theta.jpg';
+import sadhuPlusThetaPhoto from '../public/images/services/sadhu-plus-theta.jpg';
 import negativEnerjiPhoto from '../public/images/services/negativ-enerji-temizliyi.jpg';
 import ruhEsiSevgiAilePhoto from '../public/images/services/ruh-esi-sevgi-aile.jpg';
 import aileMunasibetleriPhoto from '../public/images/services/aile-munasibetleri.jpg';
@@ -178,7 +179,7 @@ const services = [
     ),
   },
   {
-    photo: sadhuThetaPhoto,
+    photo: sadhuPlusThetaPhoto,
     title: 'Sadhu+Theta Seansı',
     price: '200 AZN',
     summary:
