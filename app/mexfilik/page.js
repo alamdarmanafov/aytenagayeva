@@ -42,6 +42,16 @@ export default function Mexfilik() {
                 üçün istifadə edilmir, qanunla tələb olunan hallar istisna təşkil edir.
               </p>
 
+              <h3>Rəsmi fəaliyyət</h3>
+              <p>
+                Fəaliyyətim Azərbaycan Respublikasının qanunvericiliyinə uyğun olaraq rəsmi şəkildə həyata
+                keçirilir.
+              </p>
+              <p>Fərdi sahibkar • Vergi ödəyicisi • VÖEN</p>
+              <p>
+                Göstərilən xidmətlər üzrə qanunvericiliklə müəyyən edilmiş vergi öhdəlikləri yerinə yetirilir.
+              </p>
+
               <p>
                 Saytdan istifadə etməklə siz bu məlumatları oxuduğunuzu və spiritual xidmətlərin mahiyyətini
                 başa düşdüyünüzü qəbul etmiş olursunuz.

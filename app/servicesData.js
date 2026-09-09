@@ -12,6 +12,9 @@ import maddiArtimPhoto from '../public/images/services/maddi-artim.jpg';
 import daxiliHuzurSevgiPhoto from '../public/images/services/daxili-huzur-sevgi.jpg';
 import qadinliqEnerjisiPhoto from '../public/images/services/qadinliq-enerjisi.jpg';
 import arzulariReallasdirmaPhoto from '../public/images/services/arzulari-reallasdirma.jpg';
+import accessBarsPhoto from '../public/images/services/access-bars.jpg';
+import accessBodyPhoto from '../public/images/services/access-body.jpg';
+import thetaHealingTelimiPhoto from '../public/images/services/theta-healing-telimi.jpg';
 
 const services = [
   {
@@ -174,34 +177,161 @@ const services = [
       </>
     ),
   },
+  {
+    photo: sadhuThetaPhoto,
+    title: 'Sadhu+Theta Seansı',
+    price: '200 AZN',
+    summary:
+      'Bədəndə yığılan gərginlik və şüuraltında toplanan emosional yüklərlə dərin şəkildə işləyən xüsusi seans.',
+    meta: ['1.5 saat', 'Ayda 1 dəfə'],
+    details: (
+      <>
+        <p>
+          SADHU praktikası vasitəsilə bədəndə toplanmış stress, gərginlik, yorğunluq və bastırılmış duyğuların
+          sərbəst buraxılması prosesinə dəstək olunur. Theta Healing isə şüuraltı inanclar və emosional mövzular
+          üzərində energetik iş aparır.
+        </p>
+        <p>
+          SADHU+ Theta Healing birlikdə bədən və şüuraltı ilə eyni anda işləməyə imkan verir və ilk seansdan belə
+          güclü fərqindəlik və yüngüllük hissləri yarada bilər.
+        </p>
+        <p>Bu seansı hər kəsə mütləq tövsiyə edirəm.</p>
+      </>
+    ),
+  },
+  {
+    photo: accessBarsPhoto,
+    title: 'Access Bars Seansı',
+    price: '150 AZN',
+    summary: 'Zehnindəki məhdudiyyətlərdən azad ol. Həyatında yeni imkanlara yer aç.',
+    meta: [],
+    details: (
+      <>
+        <p>
+          Access Bars başın üzərində yerləşən 32 xüsusi nöqtəyə yüngül toxunuşlarla tətbiq olunan energetik
+          praktikadır. Bu nöqtələr Access Consciousness yanaşmasına görə həyatın müxtəlif sahələri ilə
+          əlaqələndirilir — pul, münasibətlər, yaradıcılıq, nəzarət, bədən, sevinc və daha çoxu.
+        </p>
+        <p>
+          Seansın məqsədi sadəcə rahatlamaq deyil. Səni köhnə düşüncə və davranış dövrlərində saxlayan yüklərə
+          başqa cür baxmaq və onları buraxmaq üçün bədənə və şüura məkan yaratmaqdır.
+        </p>
+        <p>Seans zamanı üzərində işləmək istədiyin mövzuya fokuslana bilərik:</p>
+        <ul>
+          <li>Münasibətlər və sevgi</li>
+          <li>Pul və bolluq</li>
+          <li>Arzular və hədəflər</li>
+          <li>Qorxular və məhdudlaşdırıcı inanclar</li>
+          <li>Keçmişdən gələn emosional yüklər</li>
+          <li>Özünə dəyər və özünü ifadə etmək</li>
+          <li>İş, biznes və yaradıcılıq</li>
+          <li>Qərar verməkdə çətinlik və təkrarlanan həyat dövrləri</li>
+          <li>Həyatında dəyişdirmək istədiyin digər mövzular</li>
+        </ul>
+        <p>
+          Bəzən dəyişiklik üçün daha çox düşünmək yox, düşüncələrin yaratdığı səs-küyü azaltmaq lazımdır. Access
+          Bars bunu yumşaq toxunuş, dərin rahatlama və fərqli şüur imkanlarına açılma prosesi kimi təqdim edir.
+          Rəsmi mənbəyə görə insanlar seanslardan daha sakit zehin, rahatlama, stressin azalması, həyatla bağlı
+          daha fərqli baxış, enerji və yaradıcılıqda artım kimi təcrübələr bildirirlər.
+        </p>
+      </>
+    ),
+  },
+  {
+    photo: accessBodyPhoto,
+    title: 'Access Body Seansı',
+    price: '300 AZN',
+    summary:
+      'Bədənin müxtəlif nahiyələrinə xüsusi əl toxunuşları və energetik proseslərin tətbiqi ilə həyata keçirilən praktikadır.',
+    meta: [],
+    details: (
+      <>
+        <p>Hansı mövzularda işlənə bilər?</p>
+        <p>Access Body sistemində müxtəlif proseslər fərqli ehtiyac və mövzulara yönəldilə bilər. Məsələn:</p>
+        <ul>
+          <li>Bədəndə yığılan gərginlik və stress</li>
+          <li>Keçmiş təcrübələrin bədəndə yaratdığı izlər</li>
+          <li>Emosional və energetik yüklər</li>
+          <li>Bədənlə münasibət və öz bədənini qəbul etmək</li>
+          <li>Hüceyrə yaddaşı</li>
+          <li>Başqalarının ağrılarını və reallıqlarını öz üzərinə götürmək</li>
+          <li>Bədənin müəyyən sahələrində hiss edilən məhdudiyyətlər</li>
+          <li>Yaşlanma ilə bağlı bədəndə formalaşan gərginliklər</li>
+          <li>Bədənin enerji və canlılığını daha fərqli şəkildə hiss etmək</li>
+          <li>Bədənlə əlaqəni və onun siqnallarını daha yaxşı eşitmək</li>
+        </ul>
+        <p>
+          Access Body seansı bədənlə mübarizə aparmaq əvəzinə onunla əməkdaşlıq etməyə, onu dinləməyə və bədənin
+          malik olduğu imkanları başqa cür kəşf etməyə dəvət edir.
+        </p>
+      </>
+    ),
+  },
 ];
 
-const training = {
-  photo: sadhuThetaPhoto,
-  title: 'Sadhu Təlimi',
-  summary:
-    'Hind mistikasının sirli yolu — özünə qayıdış təlimi. 4 günlük transformativ proqram sonunda terapist olub seanslar etmək hüququ verən sertifikat təqdim olunur.',
-  meta: ['4 gün', 'Fərdi: 790 AZN', 'Qrup: 490 AZN'],
-  details: (
-    <>
-      <p>Sadhu təlimi sənə nə verir:</p>
-      <ul>
-        <li>Terapist olub seanslar etmə hüququ</li>
-        <li>Zehni sakitlik və diqqət</li>
-        <li>Ruhsal yüksəliş və fərqindəlik</li>
-        <li>Stressdən və mənasız təlaşdan azadlıq</li>
-        <li>Daxili güc və intuisiyanın oyadılması</li>
-        <li>Öz yolunu, məqsədini kəşf etmək</li>
-        <li>Qorxulardan, keçmişdən və yorğunluqdan azad olmaq üçün fürsət</li>
-      </ul>
-      <p>
-        Bu yol nə dini, nə də adi təlimdir — özünə qayıdışdır. Ağlını deyil, ruhunu dinlə. Təlim sonunda sertifikat
-        təqdim olunur.
-      </p>
-      <p>Fərdi təlim 790 AZN, qrup təlimi 490 AZN. 2 hissəli ödəniş mümkündür.</p>
-    </>
-  ),
-};
+const trainings = [
+  {
+    photo: sadhuThetaPhoto,
+    title: 'Sadhu Təlimi',
+    summary:
+      'Hind mistikasının sirli yolu — özünə qayıdış təlimi. 4 günlük transformativ proqram sonunda terapist olub seanslar etmək hüququ verən sertifikat təqdim olunur.',
+    meta: ['4 gün', 'Fərdi: 790 AZN', 'Qrup: 490 AZN'],
+    details: (
+      <>
+        <p>Sadhu təlimi sənə nə verir:</p>
+        <ul>
+          <li>Terapist olub seanslar etmə hüququ</li>
+          <li>Zehni sakitlik və diqqət</li>
+          <li>Ruhsal yüksəliş və fərqindəlik</li>
+          <li>Stressdən və mənasız təlaşdan azadlıq</li>
+          <li>Daxili güc və intuisiyanın oyadılması</li>
+          <li>Öz yolunu, məqsədini kəşf etmək</li>
+          <li>Qorxulardan, keçmişdən və yorğunluqdan azad olmaq üçün fürsət</li>
+        </ul>
+        <p>
+          Bu yol nə dini, nə də adi təlimdir — özünə qayıdışdır. Ağlını deyil, ruhunu dinlə. Təlim sonunda sertifikat
+          təqdim olunur.
+        </p>
+        <p>Fərdi təlim 790 AZN, qrup təlimi 490 AZN. 2 hissəli ödəniş mümkündür.</p>
+      </>
+    ),
+  },
+  {
+    photo: thetaHealingTelimiPhoto,
+    title: 'Theta Healing Təlimi',
+    summary:
+      'Theta vəziyyətinə keçərək Yaradanın enerjisi ilə əlaqə qurmağı, daxili sezgiləri gücləndirməyi və şüuraltında gizlənən inancları dəyişdirməyi öyrədən spiritual praktika.',
+    meta: ['3 gün', 'Online', '700 AZN'],
+    details: (
+      <>
+        <p>Bu təlimdə sən:</p>
+        <ul>
+          <li>Yaradanla və ilahi enerji ilə əlaqə qurmağı</li>
+          <li>Theta vəziyyətinə keçməyi və meditasiya etməyi</li>
+          <li>Sezgilərini və intuitiv qavrayışını inkişaf etdirməyi</li>
+          <li>Özünü və başqalarını energetik olaraq "oxumağı"</li>
+          <li>Şüuraltındakı məhdudlaşdırıcı inancları görüb dəyişdirməyi</li>
+          <li>İstəklərin, münasibətlərin, bolluğun və həyatındakı digər mövzuların üzərində işləməyi öyrənirsən</li>
+        </ul>
+        <p>Bu təlim kimlər üçündür?</p>
+        <p>
+          ThetaHealing ilə tanış olan, öz üzərində daha dərindən işləmək, mənəvi və intuitiv qabiliyyətlərini
+          inkişaf etdirmək və gələcəkdə bu texnikanı başqalarına tətbiq etmək istəyən hər kəs üçün uyğundur.
+        </p>
+        <p>Rəsmi sertifikasiya</p>
+        <p>Təlim rəsmi ThetaHealing Basic DNA Practitioner sertifikasiyası ilə tamamlanır.</p>
+        <p>Təlim haqqında:</p>
+        <ul>
+          <li>Müddət: 3 gün</li>
+          <li>Format: Online</li>
+          <li>Qiymət: 700 AZN</li>
+          <li>Sertifikat: Rəsmi ThetaHealing® Basic DNA Practitioner sertifikasiyası</li>
+          <li>Başlanğıc səviyyə: Əvvəlcədən təcrübə tələb olunmur</li>
+        </ul>
+      </>
+    ),
+  },
+];
 
 const packages = [
   {
@@ -293,4 +423,4 @@ const packages = [
 ];
 
 
-export { services, packages, training };
+export { services, packages, trainings };

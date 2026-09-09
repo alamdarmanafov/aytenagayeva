@@ -18,6 +18,8 @@ import certManifesting from '../public/images/certificates/manifesting-abundance
 import certManifestingFull from '../public/images/certificates/manifesting-abundance-full.jpg';
 import certJaas from '../public/images/certificates/jaas.jpg';
 import certJaasFull from '../public/images/certificates/jaas-full.jpg';
+import certInstructorDna from '../public/images/certificates/instructor-dna.jpg';
+import certInstructorDnaFull from '../public/images/certificates/instructor-dna-full.jpg';
 
 const specialties = [
   { icon: IconLeaf, title: 'Şüuraltı Transformasiya', text: 'Şüuraltı blokların və keçmiş travmaların şəfalandırılması.' },
@@ -48,6 +50,13 @@ const certificates = [
     images: [
       { src: certManifesting, full: certManifestingFull, label: 'ThetaHealing — Manifesting and Abundance' },
       { src: certJaas, full: certJaasFull, label: "JAAS — Jean Adrienne's Clearing System" },
+    ],
+    pills: [],
+  },
+  {
+    year: '2026',
+    images: [
+      { src: certInstructorDna, full: certInstructorDnaFull, label: 'ThetaHealing — Basic DNA Instructor' },
     ],
     pills: [],
   },
@@ -150,12 +159,12 @@ export default function Home() {
                 <span>İştirakçı</span>
               </div>
               <div className="stat">
-                <strong>5</strong>
+                <strong>9</strong>
                 <span>Seans növü</span>
               </div>
               <div className="stat">
-                <strong>1</strong>
-                <span>Dil (Az)</span>
+                <strong>2</strong>
+                <span>Dil (Az, Tr)</span>
               </div>
             </div>
           </div>
