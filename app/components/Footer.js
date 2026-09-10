@@ -1,6 +1,5 @@
 import { IconInstagram, IconYoutube, IconWhatsapp } from '../icons';
 import { WHATSAPP_LINK, YOUTUBE_LINK, INSTAGRAM_LINK } from '../constants';
-import { services } from '../servicesData';
 
 export default function Footer() {
   return (
@@ -52,16 +51,6 @@ export default function Footer() {
               <li>
                 <a href="/mexfilik">Məxfilik</a>
               </li>
-            </ul>
-          </div>
-          <div className="footer-col">
-            <h4>Seanslar</h4>
-            <ul>
-              {services.slice(0, 4).map((s) => (
-                <li key={s.title}>
-                  <a href="/seanslar">{s.title}</a>
-                </li>
-              ))}
             </ul>
           </div>
         </div>
