@@ -23,6 +23,9 @@ export default function Footer() {
             <div className="footer-contact">
               <span>Əlaqə:</span>
               <a href="tel:+994708768657">+994708768657</a>
+            </div>
+            <div className="footer-contact">
+              <span>Email:</span>
               <a href="mailto:info@aytenagayeva.com">info@aytenagayeva.com</a>
             </div>
           </div>

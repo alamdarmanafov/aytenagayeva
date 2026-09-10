@@ -915,6 +915,10 @@ footer {
   gap: 0.4rem 0.6rem;
 }
 
+.footer-contact + .footer-contact {
+  margin-top: 0.4rem;
+}
+
 .footer-contact a {
   color: #cfd6c1;
   text-decoration: none;
