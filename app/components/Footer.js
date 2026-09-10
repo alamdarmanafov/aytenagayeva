@@ -20,9 +20,11 @@ export default function Footer() {
                 <IconWhatsapp />
               </a>
             </div>
-            <p className="footer-contact">
-              Əlaqə: <a href="tel:+994708768657">+994708768657</a>
-            </p>
+            <div className="footer-contact">
+              <span>Əlaqə:</span>
+              <a href="tel:+994708768657">+994708768657</a>
+              <a href="mailto:info@aytenagayeva.com">info@aytenagayeva.com</a>
+            </div>
           </div>
           <div className="footer-col">
             <h4>Keçidlər</h4>

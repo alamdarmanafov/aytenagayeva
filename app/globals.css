@@ -910,6 +910,9 @@ footer {
 .footer-contact {
   margin-top: 1.25rem;
   color: #cfd6c1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.6rem;
 }
 
 .footer-contact a {
